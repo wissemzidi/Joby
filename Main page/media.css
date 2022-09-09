@@ -1,0 +1,77 @@
+@media screen and (max-width: 50rem) {
+  #header {
+    grid-template-columns: min-content min-content 1fr min-content;
+    grid-template-rows: 1fr;
+    grid-template-areas: "sideBar title search login";
+  }
+  #navigation {
+    display: none;
+  }
+  #showSideBar {
+    display: grid;
+  }
+  #showSideBar img {
+    display: block;
+  }
+  #login {
+    display: block;
+  }
+  #searchBar input {
+    width: 50vw;
+  }
+  #hero-content {
+    grid-template-columns: 1fr;
+  }
+  #hero-content::before {
+    content: "";
+    position: absolute;
+    width: clamp(25rem, 60vw, 30rem);
+    background-image: url("../project assets/img/hero-illustration.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    margin-left: auto;
+  }
+  #hero-content > div {
+    margin-top: -1rem;
+    padding-top: 0;
+    gap: 0rem;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  #header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "sideBar title login" "search search search";
+  }
+  #title {
+    display: grid;
+    place-items: center;
+  }
+  #searchBar {
+    margin-inline: 0;
+  }
+  #searchBar input {
+    width: 87.5vw;
+  }
+  #hero-content::before {
+    content: "";
+    position: absolute;
+    width: 25rem;
+    background-image: url("../project assets/img/hero-illustration.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    margin-left: auto;
+  }
+  #hero__suggestions {
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+  #hero__suggestions ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}

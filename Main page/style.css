@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("http://fonts.cdnfonts.com/css/netron");
+@import url("http://fonts.cdnfonts.com/css/belleza");
 
 :root {
   /* colors */
-  --clr-background: rgb(245, 245, 245);
+  --clr-background: rgb(250, 250, 250);
+  --clr-background-200: rgb(239, 243, 246);
   --clr-font: #000;
   --clr-primary-100: #000;
   --clr-primary-200: #ff0000;
   --clr-primary-300: #00a156;
 
   --clr-green-100: #64cd91;
-  --clr-purple-100: #533a7c;
+  --clr-purple-100: #6c63ff;
   --clr-pink-100: #da78ff;
   --clr-pink-200: #e382ff;
   --clr-pink-300: #eba0ff;
@@ -19,6 +21,7 @@
   --ff-netron: "Netron", sans-serif;
   --ff-art: "Dancing Script", cursive;
   --ff-design: "Ms Madi", cursive;
+  --ff-logo: "Belleza", sans-serif;
 }
 
 /*
@@ -27,21 +30,17 @@
 *,
 *::before,
 *::after {
-  font-family: "Poppins", sans-serif;
+  font-family: "poppins", sans-serif;
+  color: var(--clr-font);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   text-decoration: none;
 }
 
-body {
-  position: relative;
-  width: 100vw;
-  min-height: 90vh;
-  background-color: var(--clr-background);
-}
-
 #side-bar__container {
+  display: none;
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -57,6 +56,205 @@ body {
 #side-bar__header {
   display: flex;
   justify-content: space-between;
-  padding-inline: 2rem;
+  padding-inline: 0rem;
   padding-block: 5vh;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  background-color: var(--clr-background);
+  overflow-x: hidden;
+}
+
+body > main {
+  width: min(95rem, 100vw);
+  min-height: 100vh;
+}
+
+#hero {
+  min-height: 100vh;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: min-content 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "title search nav";
+  gap: 1rem;
+  padding-inline: 2vw;
+  padding-block: 1rem;
+}
+
+#showSideBar {
+  position: fixed;
+  display: none;
+  grid-area: sideBar;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  display: grid;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+
+#showSideBar img {
+  display: none;
+}
+
+#title {
+  font-family: "Netron", sans-serif;
+  font-weight: 400;
+  grid-area: title;
+  gap: 0.75rem;
+}
+
+#title a {
+  color: var(--clr-font);
+}
+
+#searchBar {
+  width: fit-content;
+  grid-area: search;
+  display: flex;
+  margin-inline: 1rem;
+  outline: var(--clr-green-100) 1px solid;
+}
+
+#searchBar input {
+  width: clamp(10rem, 30vw, 25rem);
+  padding-inline: 1.5rem;
+  border: none;
+}
+
+#searchBar input:focus {
+  outline: none;
+}
+
+#searchBar button {
+  display: grid;
+  place-items: center;
+  border: none;
+  background-color: var(--clr-green-100);
+  padding-inline: 0.5rem;
+  cursor: pointer;
+}
+
+#navigation {
+  grid-area: nav;
+  margin-left: auto;
+}
+
+#login {
+  display: none;
+  grid-area: login;
+  width: fit-content;
+  margin-left: auto;
+  padding-top: 0.2rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#navigation__ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+#navigation__ul li a {
+  color: var(--clr-font);
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+#accountBtn {
+  display: none;
+}
+
+/* 
+
+
+
+
+*/
+
+#hero-content {
+  position: relative;
+  min-height: 82vh;
+  padding-top: 5vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#hero-content::before {
+  content: "";
+  position: absolute;
+  display: grid;
+  inset: 0;
+  background-image: url("../project assets/img/hero-illustration.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  transform: translateX(min());
+  transform: scale(0.9);
+  z-index: -2;
+}
+
+#hero-content > div {
+  padding-top: 10vh;
+  gap: 5rem;
+}
+
+#hero__p {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-font);
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+#hero__p span {
+  font-family: var(--ff-netron);
+  font-size: 2rem;
+  padding-inline: 0.5rem;
+}
+
+#hero__p a {
+  background-color: var(--clr-purple-100);
+  font-weight: normal;
+  color: var(--clr-background);
+  padding-inline: 1em;
+  padding-block: 0.5rem;
+  border-radius: 5px;
+}
+
+#hero__suggestions {
+  display: grid;
+  margin-top: 3rem;
+}
+
+#hero__suggestions ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 1vw;
+}
+
+#hero__suggestions ul li {
+  width: fit-content;
+  opacity: 0.7;
+  background-color: var(--clr-font);
+  padding-inline: 0.75em;
+  border-radius: 50px;
+}
+
+#hero__suggestions ul li a {
+  font-weight: 500;
+  color: var(--clr-background);
 }

@@ -12,28 +12,60 @@
     <aside id="side-bar__container">
       <aside id="side-bar__inner">
         <header id="side-bar__header">
-          <h3>Joby</h3>
+          <h3 id="title">Joby</h3>
           <button id="hideSideBarBtn">Exit</button>
         </header>
       </aside>
     </aside>
 
-    <main>
-      <header id="header">
-        <div id="header__logo-container">
-          <img id="header__logo__img" src="./" alt="Logo" />
-        </div>
-        <div id="header__navigation">
-          <ul id="navigation__ul">
-            <li><a href="#">nav</a></li>
-            <li><a href="#">nav</a></li>
-            <li><a href="#">nav</a></li>
-            <li><a href="#">nav</a></li>
-          </ul>
-        </div>
-      </header>
-
-      <section id="page1"></section>
+    <main id="content">
+      <section id="hero">
+        <header id="header">
+          <button id="showSideBar">
+            <img src="./project assets/svg/burger.svg" height="25" alt=">" />
+          </button>
+          <h2 id="title">Joby</h2>
+          <a href="#" id="login">
+            <img src="./project assets/svg/accont.svg" height="30" alt="" />
+          </a>
+          <div id="searchBar">
+            <input placeholder="search" type="search" minlength="3" />
+            <button id="searchBtn">
+              <img
+                height="15"
+                src="./project assets/svg/search.svg"
+                alt="Submit"
+              />
+            </button>
+          </div>
+          <div id="navigation">
+            <ul id="navigation__ul">
+              <li><a href="#">Account</a></li>
+              <li><a href="#">Info</a></li>
+              <li><a href="#">About-us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </header>
+        <section id="hero-content">
+          <div>
+            <p id="hero__p">
+              <span id="hero__p__title">Joby</span> Your Way to find a Job
+              <br />
+              <br />
+              <a id="hero__join" href="#">Join Now</a>
+            </p>
+            <div id="hero__suggestions">
+              <ul>
+                <li><a href="#">Freelance</a></li>
+                <li><a href="#">Developer</a></li>
+                <li><a href="#">Designer</a></li>
+                <li><a href="#">Companies</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
   </body>
   <script src="./Main page/main.js"></script>

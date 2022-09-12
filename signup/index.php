@@ -46,7 +46,7 @@
     <section id="page">
       <center><h2 id="login__header">Sign Up</h2></center>
       <form id="login" method="post">
-        <a href="../index.html" id="return__btn">
+        <a href="../index.php" id="return__btn">
           <img height="20" src="./icons/return.svg" alt=">" />
         </a>
         <div id="login__input">
@@ -100,7 +100,7 @@
                 color: white;
                 border-radius: 50px;
               "
-              href="../sign in page/index.html"
+              href="../signin/index.php"
             >
               Sign In
             </a>

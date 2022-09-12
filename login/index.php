@@ -16,6 +16,7 @@
             
             if ($login_id !== false){
                 $_SESSION['id'] = $login_id;
+                header("Location: /"); 
             }
         }
     }
@@ -49,6 +50,7 @@
               title="Email"
               type="email"
               autocomplete="off"
+              name="name"
             />
           </div>
           <div id="login__input__container">
@@ -59,12 +61,17 @@
               class=""
               type="password"
               autocomplete="off"
+              name="pwd"
             />
             <span id="input__conditions">Minimum 8 characters</span>
           </div>
         </div>
         <div id="login__submit">
           <button id="login__submit__btn" name="reg">Sign In</button>
+        </div>
+        <div>
+          <!-- Error message -->
+          <?php echo $error_msg; ?>
         </div>
       </form>
     </section>

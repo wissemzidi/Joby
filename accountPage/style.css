@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/netron");
+
+:root {
+  /* colors */
+  --clr-background: rgb(250, 250, 250);
+  --clr-background-200: rgb(239, 243, 246);
+  --clr-font: #000;
+  --clr-primary-100: #000;
+  --clr-primary-200: #ff0000;
+  --clr-primary-300: #00a156;
+
+  --clr-green-100: #65cd92;
+  --clr-purple-100: #6c63ff;
+  --clr-pink-100: #da78ff;
+  --clr-pink-200: #e382ff;
+  --clr-pink-300: #eba0ff;
+
+  /* fonts */
+  --ff-netron: "Netron", sans-serif;
+}
+
+/*
+*/
+
+*,
+*::before,
+*::after {
+  font-family: "poppins", sans-serif;
+  color: var(--clr-font);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+body > main {
+  width: min(100vw, 40rem);
+  padding: 1rem;
+}
+
+body > main > header {
+  display: flex;
+  gap: 1rem;
+}
+
+#account__img {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+#changeImg {
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  padding: 0.2rem;
+  z-index: 1;
+}
+
+#account__img img {
+  height: clamp(10rem, 2vw, 15rem);
+  aspect-ratio: 1;
+  position: relative;
+  outline: 1px solid black;
+}
+
+#account__info {
+  display: grid;
+  height: fit-content;
+  gap: 0.5rem;
+}
+
+#account__info:nth-child(1) {
+  font-family: var(--ff-netron);
+}
+
+#account__info > * {
+  font-weight: normal;
+}
+
+@media screen and (max-width: 20rem) {
+  body > main > header {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+  }
+}

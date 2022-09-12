@@ -4,9 +4,80 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Account</title>
   </head>
   <body>
-    <main id="content"></main>
+    <main id="content">
+      <br />
+      <center><h1 style="font-weight: 400">Account</h1></center>
+      <br />
+      <header>
+        <div id="account__img">
+          <img height="100" src="./img/logo.jpg" alt="Img" />
+          <button id="changeImg">Change Img</button>
+        </div>
+        <div id="account__info">
+          <h1>Wissem</h1>
+          <h4>Wissem Zidi</h4>
+          <h5>wissem.zidi.ofc@gmail.com</h5>
+        </div>
+      </header>
+      <br />
+      <section id="hero">
+        <div id="inputs">
+          <form id="input">
+            <label for="changeName">Change Name</label>
+            <input
+              name="name"
+              id="changeName"
+              placeholder="Wissem"
+              type="text"
+            />
+            <button type="submit">Submit</button>
+          </form>
+          <form id="input">
+            <label for="changeEmail">Change email</label>
+            <input
+              name="email"
+              id="changeEmail"
+              placeholder="wissem.zidi.ofc@gmail.com"
+              type="text"
+            />
+            <button type="submit">Submit</button>
+          </form>
+          <form id="input">
+            <h3>Change Password</h3>
+            <div id="inputs">
+              <label for="currentPwd">Current password</label>
+              <input
+                id="currentPwd"
+                placeholder="Current Password"
+                type="text"
+              />
+              <br />
+              <label for="newPwd">New password</label>
+              <input
+                name="newPwd"
+                id="newPwd"
+                placeholder="New Password"
+                type="text"
+              />
+              <br />
+              <label for="repeatPwd">Rewrite password</label>
+              <input
+                name="repeatPwd"
+                id="repeatPwd"
+                placeholder="Password"
+                type="text"
+              />
+            </div>
+            <button type="submit"></button>
+          </form>
+        </div>
+        <button>Change Password</button>
+      </section>
+    </main>
   </body>
+  <script src="./main.js"></script>
 </html>

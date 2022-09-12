@@ -53,7 +53,7 @@ const pageContentInnerHtml = (name, email, id) => {
       <p>${email}</p>
     </div>
     <div id="inner__btn">
-      <a href="#" title="More">More</a>
+      <a href="#" title="More">${"Join"}</a>
     </div>
   </div>`;
   return content;

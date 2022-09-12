@@ -5,6 +5,7 @@ const passwordInput = document.querySelector("#password__input");
 const submitBtn = document.querySelector("#login__submit__btn");
 const form = document.querySelector("#login");
 const regex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-z]+)$/;
+const format = "/^[a-zA-Z0-9_- #]*$/";
 
 // On screen load
 is_emailValid();
@@ -38,15 +39,12 @@ window.addEventListener("keyup", () => {
     submitBtn.addEventListener("click", function () {
       activateSpinner();
       document.querySelector(".bg").classList.add("active");
-      setTimeout(function () {
-        window.location.href = "../index.html";
-      }, 3000);
     });
   }
 });
 
 nameInput.addEventListener("keyup", function () {
-  if (nameInput.value.length >= 4) {
+  if (nameInput.value.length >= 4 && nameInput.value.length <= 16) {
     nameInput.className = "valid";
   } else {
     nameInput.className = "invalid";
@@ -139,6 +137,12 @@ submitBtn.addEventListener("click", () => {
 function is_emailValid() {
   if (regex.test(emailInput.value)) {
     emailInput.className = "valid";
+  }
+}
+
+function is_nameValid() {
+  if (format.test(nameInput.value)) {
+    nameInput.className = "valid";
   }
 }
 

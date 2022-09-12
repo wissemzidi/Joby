@@ -1,3 +1,6 @@
+<?php
+  require 'conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,14 +26,18 @@
       <div id="side-bar__inner">
         <div id="side-bar__header">
           <h3 id="title">
-            <a href="./sign up page/index.html" id="login">
+            <a href="<?php echo ($logged_in)? "./accountPage/" : "./signin/";  ?>" id="login">
               <img
                 title="Account"
                 src="./project assets/svg/accont.svg"
                 height="30"
                 alt=""
               />
-              <h6 style="font-size: 0.8rem">user</h6>
+              <h6 style="font-size: 0.8rem">
+              <?php
+                  echo ($logged_in)? $user->username : "Login";
+              ?>
+              </h6>
             </a>
           </h3>
           <button id="hideSideBar">
@@ -70,14 +77,18 @@
             />
           </button>
           <h2 id="title">Joby</h2>
-          <a href="./sign up page/index.html" id="login">
+          <a href="<?php echo ($logged_in)? "./accountPage/" : "./signin/";  ?>" id="login">
             <img
               title="Account"
               src="./project assets/svg/accont.svg"
               height="30"
               alt=""
             />
-            <h6>user</h6>
+            <h6>
+            <?php
+                  echo ($logged_in)? $user->username : "Login";
+            ?>
+            </h6>
           </a>
           <div id="searchBar">
             <input
@@ -105,8 +116,10 @@
               <li><a href="#">About-us</a></li>
               <li><a href="#">Contact</a></li>
               <li>
-                <a id="login-wide-screen" href="./sign up page/index.html">
-                  user
+                <a id="login-wide-screen" href="<?php echo ($logged_in)? "./accountPage/" : "./signin/";  ?>">
+                  <?php
+                    echo ($logged_in)? $user->username : "Login";
+                  ?>
                 </a>
               </li>
             </ul>

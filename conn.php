@@ -34,7 +34,7 @@ function create_user($uid){
     $user->set_info($uid,"square","squar3dev@gmail.com",0);
     return $user;
 }
-
+$user = create_user(-1);
 $logged_in = false;
 if (isset($_SESSION['id'])){
     $user = create_user((int)$_SESSION['id']);

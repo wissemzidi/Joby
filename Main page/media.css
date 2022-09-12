@@ -14,7 +14,7 @@
     display: block;
   }
   #login {
-    display: block;
+    display: grid;
   }
   #searchBar input {
     width: 50vw;

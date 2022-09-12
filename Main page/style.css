@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("http://fonts.cdnfonts.com/css/netron");
-@import url("http://fonts.cdnfonts.com/css/belleza");
 
 :root {
   /* colors */
@@ -19,9 +18,6 @@
 
   /* fonts */
   --ff-netron: "Netron", sans-serif;
-  --ff-art: "Dancing Script", cursive;
-  --ff-design: "Ms Madi", cursive;
-  --ff-logo: "Belleza", sans-serif;
 }
 
 /*
@@ -282,6 +278,9 @@ body > main {
 
 #login {
   display: none;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
   grid-area: login;
   width: fit-content;
   margin-left: auto;
@@ -305,6 +304,25 @@ body > main {
 
 #accountBtn {
   display: none;
+}
+
+#login-wide-screen {
+  outline: 1px solid var(--clr-font);
+  padding: 0.3em 0.8em;
+  border-radius: 50px;
+  background-color: var(--clr-background);
+  color: var(--clr-font);
+  font-weight: 400;
+  opacity: 1 !important;
+  transition: 0.2s ease-out background-color;
+}
+
+#login-wide-screen:where(:hover, :focus-visible) {
+  outline: 1px solid var(--clr-font);
+  padding: 0.3em 0.8em;
+  border-radius: 50px;
+  background-color: var(--clr-font);
+  color: var(--clr-background) !important;
 }
 
 /* 

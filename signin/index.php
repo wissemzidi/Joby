@@ -1,3 +1,25 @@
+<?php
+    require '../conn.php';
+    require '../funcs.php';
+    if ($logged_in){ header("Location: /"); }
+    $error_msg = "";
+    if (isset($_POST['reg'])){
+        $name = isset($_POST['name']) ? $_POST['name'] : "";
+        $pwd  = isset($_POST['pwd']) ?  $_POST['pwd']  : "";
+        $login_id = Login($conn,$name,$pwd);
+
+        // Error messages
+        $error_msg .= ($login_id === false) ? "Username or password incorrect!<br>" : "";
+        
+        // In case we don't have any errors
+        if (strlen($error_msg) === 0){
+            
+            if ($login_id !== false){
+                $_SESSION['id'] = $login_id;
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,7 +36,7 @@
     <div class="spinner"></div>
     <section id="page">
       <center><h2 id="login__header">Sign In</h2></center>
-      <form id="login">
+      <form id="login" method="POST">
         <a href="../index.html" id="return__btn">
           <img height="20" src="./icons/return.svg" alt=">" />
         </a>

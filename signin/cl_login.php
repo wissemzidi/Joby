@@ -1,6 +1,6 @@
 <?php
-    require 'conn.php';
-    require 'funcs.php';
+    require '../conn.php';
+    require '../funcs.php';
     if ($logged_in){ header("Location: /"); }
     $error_msg = "";
     if (isset($_POST['reg'])){

@@ -1,6 +1,9 @@
 <?php
-    require 'conn.php';
-    require 'funcs.php';
+    echo "lol" . $_SESSION['id'];
+
+    require '../conn.php';
+    require '../funcs.php';
+    echo "lol" . $_SESSION['id'];
     if ($logged_in){ header("Location: /"); }
     $error_msg = "";
     if (isset($_POST['reg'])){
@@ -11,12 +14,12 @@
 
         // Error messages
         $error_msg .= (!verify_email($email)) ?                          "Email isn't valid<br>" : "";
-        $error_msg .= (!verify_username($name)) ?                       "Only letters,numbers and _ are allowed in username<br>" : "";
-        $error_msg .= (!(strlen($name) <= 16 && strlen($name) >= 4)) ?  "Username length should be between 4 and 16<br>" : "";
-        $error_msg .= (!(strlen($pwd) <= 32 && strlen($pwd) >= 6)) ?    "Password length should be between 6 and 32<br>" : "";
-        $error_msg .= (username_exists($conn,$name)) ?                  "Username already exists<br>" : "";
+        $error_msg .= (!verify_username($name)) ?                        "Invalid username format<br>" : "";
+        $error_msg .= (!(strlen($name) <= 16 && strlen($name) >= 4)) ?   "Username length should be between 4 and 16<br>" : "";
+        $error_msg .= (!(strlen($pwd) >= 8)) ?                           "Password length should be more than 8<br>" : "";
+        $error_msg .= (username_exists($conn,$name)) ?                   "Username already exists<br>" : "";
         $error_msg .= (email_exists($conn,$email)) ?                     "Email already exists<br>" : "";
-        $error_msg .= ($pwd != $re_pwd) ?                               "Password doesn't match<br>" : "";
+        // $error_msg .= ($pwd != $re_pwd) ?                                "Password doesn't match<br>" : "";
         
         // In case we don't have any errors
         if (strlen($error_msg) === 0){
@@ -41,7 +44,7 @@
             <input name="mail" type="email" placeholder="email" required><br>
             <input name="name" type="text" placeholder="username" required><br>
             <input name="pwd" type="password" placeholder="password" required><br>
-            <input name="re_pwd" type="password" placeholder="repeat password" required><br>
+            <!-- <input name="re_pwd" type="password" placeholder="repeat password" required><br> -->
             <button type="submit" name="reg">Submit</button><br>
             <?php
                 echo $error_msg;

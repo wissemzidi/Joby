@@ -10,15 +10,30 @@
   </head>
   <body>
     <!-- 
+      scroll to top
+    -->
+    <button id="toTop">
+      <img height="25" src="./project assets/svg/top.svg" alt="" />
+    </button>
+    <!-- 
       
       
       side bar -->
-    <aside id="side-bar__container">
+    <aside class="close" id="side-bar">
       <div id="side-bar__inner">
         <div id="side-bar__header">
-          <h3 id="title">Joby</h3>
+          <h3 id="title">
+            <a href="./sign up page/index.html" id="login">
+              <img
+                title="Account"
+                src="./project assets/svg/accont.svg"
+                height="30"
+                alt=""
+              />
+            </a>
+          </h3>
           <button id="hideSideBar">
-            <img height="30" src="./project assets/svg/exit.svg" alt="x" />
+            <img height="25" src="./project assets/svg/exit.svg" alt="x" />
           </button>
         </div>
         <div id="side-bar__content">
@@ -45,28 +60,57 @@
       <section id="hero">
         <header id="header">
           <button id="showSideBar">
-            <img src="./project assets/svg/burger.svg" height="25" alt=">" />
+            <img
+              title="side Bar"
+              id="showAsideImg"
+              src="./project assets/svg/burger.svg"
+              height="25"
+              alt=">"
+            />
           </button>
           <h2 id="title">Joby</h2>
-          <a href="#" id="login">
-            <img src="./project assets/svg/accont.svg" height="30" alt="" />
+          <a href="./sign up page/index.html" id="login">
+            <img
+              title="Account"
+              src="./project assets/svg/accont.svg"
+              height="30"
+              alt=""
+            />
           </a>
           <div id="searchBar">
-            <input placeholder="search" type="search" minlength="3" />
+            <input
+              title="minimum 3 characters"
+              id="searchInput"
+              placeholder="search"
+              type="search"
+            />
             <button id="searchBtn">
               <img
+                title="search"
                 height="15"
                 src="./project assets/svg/search.svg"
                 alt="Submit"
               />
             </button>
+            <div id="search__drop-down">
+              <ul id="search__Menu__content"></ul>
+            </div>
           </div>
           <div id="navigation">
             <ul id="navigation__ul">
-              <li><a href="#">Account</a></li>
               <li><a href="#">Info</a></li>
               <li><a href="#">About-us</a></li>
               <li><a href="#">Contact</a></li>
+              <li>
+                <a href="./Login page/index.html">
+                  <img
+                    title="Account"
+                    src="./project assets/svg/accont.svg"
+                    height="30"
+                    alt=""
+                  />
+                </a>
+              </li>
             </ul>
           </div>
         </header>
@@ -104,26 +148,150 @@
       <section id="page2">
         <h2>Find Your interest</h2>
         <div id="page2__cards">
-          <div class="page2__card">
+          <a href="#" class="card">
             <h5>Editing</h5>
-          </div>
-          <div class="page2__card">
+          </a>
+          <a href="#" class="card">
             <h5>Architecture</h5>
-          </div>
-          <div class="page2__card">
+          </a>
+          <a href="#" class="card">
             <h5>Designer</h5>
-          </div>
-          <div class="page2__card">
+          </a>
+          <a href="#" class="card">
             <h5>Developer</h5>
-          </div>
-          <div class="page2__card">
-            <h5>test</h5>
-          </div>
-          <div class="page2__card">
-            <h5>test</h5>
-          </div>
+          </a>
+          <a href="#" class="card">
+            <h5>healthcare</h5>
+          </a>
+          <a href="#" class="card">
+            <h5>Cyber security</h5>
+          </a>
         </div>
       </section>
+      <!-- 
+
+
+
+
+
+      Page3-->
+      <section id="page3">
+        <div>
+          <h4>Clients Opinion</h4>
+        </div>
+        <div>
+          <ul>
+            <a href="#">
+              <li>
+                <img src="#" alt="" />
+                <h4></h4>
+                <h6></h6>
+              </li>
+            </a>
+            <a href="#">
+              <li>
+                <img src="#" alt="" />
+                <h4></h4>
+                <h6></h6>
+              </li>
+            </a>
+            <a href="#">
+              <li>
+                <img src="#" alt="" />
+                <h4></h4>
+                <h6></h6>
+              </li>
+            </a>
+          </ul>
+        </div>
+      </section>
+      <!-- 
+
+
+
+
+
+
+
+      -->
+      <section id="page4">
+        <div>
+          <h2>About-Us</h2>
+          <h6></h6>
+        </div>
+      </section>
+      <!-- 
+
+
+
+
+
+
+
+      -->
+      <footer>
+        <div class="footer-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-3 item">
+                <h3>Team</h3>
+                <ul>
+                  <li><a href="#">Front-end developer</a></li>
+                  <li><a href="#">Back-end developer</a></li>
+                  <li><a href="#">Github</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                <h3>About</h3>
+                <ul>
+                  <li><a href="#">Project</a></li>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Resources</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 item text">
+                <h3 style="font-family: var(--ff-netron)">Joby</h3>
+                <p>
+                  Joby is an open-source project for finding jobs. It can
+                  automate some aspects of your job hunt by providing you with a
+                  list of jobs from over 8,000 sources and filtering those jobs
+                  based on location, employer, and pay.
+                </p>
+              </div>
+              <div class="col item social">
+                <a href="#"
+                  ><img
+                    height="30"
+                    src="./project assets/svg/facebook.svg"
+                    alt=""
+                /></a>
+                <a href="#">
+                  <img
+                    height="30"
+                    src="./project assets/svg/instagram.svg"
+                    alt=""
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    height="30"
+                    src="./project assets/svg/email.svg"
+                    alt=""
+                  />
+                </a>
+                <a href="https://github.com/Wissem-Zidi/Joby">
+                  <img
+                    height="30"
+                    src="./project assets/svg/github.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <p class="copyright">Joby © 2022</p>
+          </div>
+        </div>
+      </footer>
     </main>
   </body>
   <script src="./Main page/main.js"></script>

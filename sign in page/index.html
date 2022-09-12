@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="#" />
+    <script src="main.js" defer></script>
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="spinner"></div>
+    <section id="page">
+      <center><h2 id="login__header">Sign In</h2></center>
+      <form id="login" onsubmit="return false">
+        <a href="../index.html" id="return__btn">
+          <img height="20" src="./icons/return.svg" alt=">" />
+        </a>
+        <div id="login__input">
+          <div id="login__input__container">
+            <label for="email__input" id="email__label">Email</label>
+            <input
+              id="email__input"
+              class=""
+              title="Email"
+              type="email"
+              autocomplete="off"
+            />
+          </div>
+          <div id="login__input__container">
+            <label for="password__input" id="password__label">Password</label>
+            <input
+              title="Password"
+              id="password__input"
+              class=""
+              type="password"
+              autocomplete="off"
+            />
+            <span id="input__conditions">Minimum 8 characters</span>
+          </div>
+        </div>
+        <div id="login__submit">
+          <button id="login__submit__btn">Sign In</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

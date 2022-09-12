@@ -4,7 +4,7 @@ function verify_email($email){
 }
 
 function verify_username($user){
-    return (bool)preg_match("/^[a-zA-Z0-9_]*$/",$user);
+    return (bool)preg_match("/^[a-zA-Z0-9_ #]*$/",$user);
 }
 
 function username_exists($conn,$user){
@@ -46,6 +46,5 @@ function Login($conn,$uname,$pwd){
     $hashed_pwd = ($result->num_rows === 0) ? "" : $row['password'];
     $stmt->close();
     return ($result->num_rows === 0 || !password_verify($pwd,$hashed_pwd)) ? false : $row['id'];
-    exit(header("Location: /"));
 }
 ?>

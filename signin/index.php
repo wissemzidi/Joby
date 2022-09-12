@@ -38,7 +38,7 @@
     <section id="page">
       <center><h2 id="login__header">Sign In</h2></center>
       <form id="login" method="POST">
-        <a href="../index.html" id="return__btn">
+        <a href="../index.php" id="return__btn">
           <img height="20" src="./icons/return.svg" alt=">" />
         </a>
         <div id="login__input">

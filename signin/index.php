@@ -48,7 +48,7 @@
               id="email__input"
               class=""
               title="Email"
-              type="email"
+              type="text"
               autocomplete="off"
               name="name"
             />
@@ -69,10 +69,28 @@
         <div id="login__submit">
           <button id="login__submit__btn" name="reg">Sign In</button>
         </div>
-        <div>
+        <br>
+        <center>
+          <div>
+            <a
+              style="
+                padding: 0.3rem 0.6rem;
+                text-decoration: none;
+                background-color: black;
+                color: white;
+                border-radius: 50px;
+              "
+              href="../signup/index.php"
+            >
+              Sign Up
+            </a>
+          </div>
+        </center>
+        <center><div style="color: red;">
+        <br>
           <!-- Error message -->
           <?php echo $error_msg; ?>
-        </div>
+        </div></center>
       </form>
     </section>
   </body>

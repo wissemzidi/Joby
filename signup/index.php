@@ -106,6 +106,10 @@
             </a>
           </div>
         </center>
+        <br>
+        <center style="color: red;">
+          <?php echo $error_msg; ?>
+        </center>
       </form>
     </section>
   </body>

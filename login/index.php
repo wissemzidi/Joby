@@ -64,7 +64,7 @@
           </div>
         </div>
         <div id="login__submit">
-          <button id="login__submit__btn">Sign In</button>
+          <button id="login__submit__btn" name="reg">Sign In</button>
         </div>
       </form>
     </section>

@@ -15,7 +15,7 @@
       <header>
         <div id="account__img">
           <img height="100" src="./img/logo.jpg" alt="Img" />
-          <button id="changeImg">Change Img</button>
+          <input type="file" accept="image/*" id="changeImg"></input>
         </div>
         <div id="account__info">
           <h1>Wissem</h1>
@@ -26,7 +26,7 @@
       <br />
       <section id="hero">
         <div id="inputs">
-          <form id="input">
+          <form id="input" method="post">
             <label for="changeName">Change Name</label>
             <input
               name="name"
@@ -36,7 +36,7 @@
             />
             <button type="submit">Submit</button>
           </form>
-          <form id="input">
+          <form id="input" method="post">
             <label for="changeEmail">Change email</label>
             <input
               name="email"
@@ -46,7 +46,7 @@
             />
             <button type="submit">Submit</button>
           </form>
-          <form id="input">
+          <form id="input" method="post">
             <h3>Change Password</h3>
             <div id="inputs">
               <label for="currentPwd">Current password</label>

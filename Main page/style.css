@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("http://fonts.cdnfonts.com/css/netron");
 
 :root {
@@ -148,7 +148,7 @@
 
 body {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   position: relative;
   width: 100%;
   background-color: var(--clr-background);
@@ -209,16 +209,17 @@ body > main {
   width: fit-content;
   grid-area: search;
   display: flex;
+  gap: 0;
   margin-inline: 1rem;
   outline: var(--clr-green-100) 1px solid;
+  height: fit-content;
 }
 
 #searchBar input {
   width: clamp(10rem, 30vw, 25rem);
-  color: red;
-  padding-block: 0.5rem;
   padding-inline: 1.5rem;
   border: none;
+  height: 2.25rem;
 }
 
 #searchBar input:focus {
@@ -226,7 +227,7 @@ body > main {
 }
 
 #searchBar button {
-  display: grid;
+  display: flex;
   place-items: center;
   border: none;
   background-color: var(--clr-green-100);
@@ -396,6 +397,7 @@ body > main {
   outline: var(--clr-font) 1px solid;
   padding-inline: 0.75em;
   border-radius: 50px;
+  opacity: 0.7;
   transition: outline 0.1s ease-out, background-color 0.2s ease-out;
 }
 
@@ -405,7 +407,7 @@ body > main {
 }
 
 #hero__suggestions ul li a {
-  font-weight: 500;
+  font-weight: 300;
   color: var(--clr-font);
   transition: color 0.2s ease-out;
 }

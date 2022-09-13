@@ -98,7 +98,7 @@
               type="search"
               autocomplete="off"
             />
-            <button id="searchBtn" onclick="window.location.href = './searchPage/index.html'">
+            <button type="submit" id="searchBtn" onclick="window.location.href = './searchPage/index.html'">
               <img
                 title="search"
                 height="15"

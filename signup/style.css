@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("http://fonts.cdnfonts.com/css/netron");
 
 *,
 *::before,
@@ -24,6 +25,8 @@
   --clr-neutral-200: #6c63ff;
   --clr-hsl-blue: 210, 100%, 60%;
   --clr-hsl-red: 0, 100%, 50%;
+
+  --ff-netron: "Netron", sans-serif;
 }
 
 html {
@@ -96,6 +99,7 @@ body {
 }
 
 #login__header {
+  font-family: var(--ff-netron);
   color: var(--clr-primary-600);
   font-weight: 500;
   margin: 4vh 0;

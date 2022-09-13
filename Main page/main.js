@@ -6,11 +6,16 @@ const main = document.querySelector("main");
 const search = document.querySelector("#searchInput");
 const searchMenu = document.querySelector("#search__drop-down");
 const searchMenuContent = document.querySelector("#search__drop-down ul");
+const searchLinks = document.getElementsByClassName("sideBarLink");
+
+for (let i = 0; i < searchLinks.length; i++) {
+  searchLinks[i].addEventListener("click", (e) => {
+    localStorage.searchLink = `${searchLinks[i].textContent}`;
+  });
+}
 
 window.addEventListener("scroll", function () {
-  console.log(window.screenY);
   if (window.scrollY >= 800) {
-    console.log("show");
     toTopBtn.style.animation = "fadeIn .2s ease-out forwards";
     toTopBtn.style.display = "grid";
   } else {
@@ -21,7 +26,6 @@ window.addEventListener("scroll", function () {
   }
 });
 toTopBtn.addEventListener("click", function () {
-  console.log("click");
   window.scrollTo({
     top: 0,
     behavior: "smooth",

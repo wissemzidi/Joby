@@ -59,6 +59,12 @@ const pageContentInnerHtml = (name, email, id) => {
   return content;
 };
 
+if (localStorage["searchLink"]) {
+  console.log("hello");
+  searchInput.value = `${localStorage["searchLink"]}`;
+  localStorage.clear("searchLink");
+}
+
 // loop
 for (let i = 0; i < Object.keys(users).length; i++) {
   // let user = users["user" + i];

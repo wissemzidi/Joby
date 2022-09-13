@@ -17,6 +17,7 @@ function username_exists($conn,$user){
     $stmt->close();
     return $x;
 }
+
 function email_exists($conn,$mail){
     $query = "SELECT * FROM users WHERE email = ?;";
     $stmt = $conn->prepare($query);
@@ -25,9 +26,9 @@ function email_exists($conn,$mail){
     $result = $stmt->get_result();
     $x = $result->num_rows > 0;
     $stmt->close();
-
     return $x;
 }
+
 function Register($conn,$name,$email,$pwd){
     $query = "INSERT INTO users(username,email,password) VALUES(?,?,?);";
     $stmt = $conn->prepare($query);
@@ -36,6 +37,7 @@ function Register($conn,$name,$email,$pwd){
     $stmt->execute();
     $stmt->close();
 }
+
 function Login($conn,$uname,$pwd){
     $query = "SELECT * FROM users WHERE email = ? OR username = ?;";
     $stmt = $conn->prepare($query);
@@ -46,5 +48,11 @@ function Login($conn,$uname,$pwd){
     $hashed_pwd = ($result->num_rows === 0) ? "" : $row['password'];
     $stmt->close();
     return ($result->num_rows === 0 || !password_verify($pwd,$hashed_pwd)) ? false : $row['id'];
+}
+
+function logout(){
+    session_destroy();
+    exit(header("Location: /"));
+    return -1;
 }
 ?>

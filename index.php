@@ -47,7 +47,7 @@
         <div id="side-bar__content">
           <ul>
             <li>
-              <a href="./searchPage/index.html">Search</a>
+              <a href="./accountPage/index.php">Set interests</a>
             </li>
             <li>
               <a class="goToSearch" href="./searchPage/index.html">Freelance</a>
@@ -145,10 +145,10 @@
             </p>
             <div id="hero__suggestions">
               <ul>
-                <li><a href="#">Freelance</a></li>
-                <li><a href="#">Developer</a></li>
-                <li><a href="#">Designer</a></li>
-                <li><a href="#">Companies</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.html">Freelance</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.html">Back-end</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.html">Designer</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.html">Front-end</a></li>
               </ul>
             </div>
           </div>

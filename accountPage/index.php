@@ -23,6 +23,21 @@
         <div id="account__info">
           <h1><?=$user->username?></h1>
           <h5><?=$user->email?></h5>
+          <select id="interest" name="interest" style="margin-top: 0.5rem; 
+            background-color: transparent; 
+            border: 1px rgba(0, 0, 0, 0.2) solid; 
+            outline: none;">
+            <option value="">Choose interest</option>
+            <option value="graphic design">Graphic & Design</option>
+            <option value="develop">Develop</option>
+            <option value="architect">Architect</option>
+            <option value="editing">Editing</option>
+            <option value="business">Business</option>
+            <option value="wordpress">WordPress</option>
+            <option value="marketing">Marketing</option>
+            <option value="music">Music & Audio</option>
+            <option value="data">Data</option>
+          </select>
         </div>
       </header>
       <br>

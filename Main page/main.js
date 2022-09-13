@@ -58,11 +58,11 @@ search.addEventListener("keyup", function (e) {
 });
 
 searchMenuContent.innerHTML = `
-  <a href="#"><li>test</li></a>
-  <a href="#"><li>test</li></a>
-  <a href="#"><li>test</li></a>
-  <a href="#"><li>test</li></a>
-  <a href="#"><li>test</li></a>
+  <a href="#"><li>Popular</li></a>
+  <a href="#"><li>Finance</li></a>
+  <a href="#"><li>Freelance</li></a>
+  <a href="#"><li>Developer</li></a>
+  <a href="#"><li>For You</li></a>
 `;
 
 window.onscroll = function (e) {

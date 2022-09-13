@@ -46,11 +46,21 @@
         </div>
         <div id="side-bar__content">
           <ul>
-            <li><a href="#">Be a Freelancer</a></li>
-            <li><a href="#">Find a Job</a></li>
-            <li><a href="#">Hire someone</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">Contact</a></li>
+            <li>
+              <a class="sideBarLink" href="./searchPage/index.html">Freelance</a>
+            </li>
+            <li>
+              <a class="sideBarLink" href="./searchPage/index.html"></a>
+            </li>
+            <li>
+              <a class="sideBarLink" href="./searchPage/index.html">Hire someone</a>
+            </li>
+            <li>
+              <a class="sideBarLink" href="./searchPage/index.html">Popular</a>
+            </li>
+            <li>
+              <a class="sideBarLink" href="#footer" onclick="hideAside.click()">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -265,7 +275,7 @@
 
 
       -->
-      <footer>
+      <footer id="footer">
         <div class="footer-dark full-bleed">
           <div class="container">
             <div class="row">

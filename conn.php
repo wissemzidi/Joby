@@ -39,6 +39,34 @@ class User {
         mysqli_stmt_close($stmt);
     }
 
+    function get_data(){
+        global $conn;
+
+        $query = "SELECT * FROM users WHERE id = ?;";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("s", $this->id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = mysqli_fetch_assoc($result);
+        $row = ($result->num_rows > 0) ? $row : null ;
+        $stmt->close();
+        return $row;
+    }
+    
+    function get_data_row($column_name){
+        global $conn;
+
+        $query = "SELECT * FROM users WHERE id = ?;";
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param("s", $this->id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = mysqli_fetch_assoc($result);
+        $info = ($result->num_rows > 0) ? $row[$column_name] : null ;
+        $stmt->close();
+        return $info;
+    }
+
 }
 
 function create_user($uid){

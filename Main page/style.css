@@ -217,6 +217,7 @@ body > main {
   width: clamp(10rem, 30vw, 25rem);
   padding-inline: 1.5rem;
   border: none;
+  font-size: 2rem;
 }
 
 #searchBar input:focus {

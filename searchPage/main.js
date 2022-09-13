@@ -2,19 +2,19 @@
 let users = {
   user0: {
     name: "Wissem",
-    email: "wissem.zidi.ofc@gmail.com",
+    email: "wissem@gmail.com",
   },
   user1: {
     name: "Omar",
-    email: "omarzidi25@gmail.com",
+    email: "omar@gmail.com",
   },
   user2: {
-    name: "Kamel",
-    email: "kamell.zidii@gmail.com",
+    name: "sdf",
+    email: "sdfezf@gmail.com",
   },
   user3: {
-    name: "Nabiha",
-    email: "nabihakhmissi55@gmail.com",
+    name: "ahmeds",
+    email: "room@gmail.com",
   },
   user4: {
     name: "Farah",
@@ -22,7 +22,7 @@ let users = {
   },
   user5: {
     name: "Youssef",
-    email: "youssefbensalah@gmail.com",
+    email: "ccccc@gmail.com",
   },
   user6: {
     name: "Ahmed",
@@ -38,7 +38,7 @@ let users = {
   },
   user9: {
     name: "Hamza",
-    email: "hamza.zidi@gmail.com",
+    email: "hamzazidi@gmail.com",
   },
 };
 
@@ -53,7 +53,7 @@ const pageContentInnerHtml = (name, email, id) => {
       <p>${email}</p>
     </div>
     <div id="inner__btn">
-      <a href="#" title="More">${"Join"}</a>
+      <a href="${"../index.php"}" title="More">${"Join"}</a>
     </div>
   </div>`;
   return content;

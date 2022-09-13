@@ -215,7 +215,8 @@ body > main {
 
 #searchBar input {
   width: clamp(10rem, 30vw, 25rem);
-  height: 1.5rem;
+  color: red;
+  padding-block: 0.5rem;
   padding-inline: 1.5rem;
   border: none;
 }

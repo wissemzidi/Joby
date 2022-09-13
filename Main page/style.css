@@ -148,7 +148,7 @@
 
 body {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   position: relative;
   width: 100%;
   background-color: var(--clr-background);
@@ -209,16 +209,18 @@ body > main {
   width: fit-content;
   grid-area: search;
   display: flex;
+  gap: 0;
   margin-inline: 1rem;
   outline: var(--clr-green-100) 1px solid;
+  height: fit-content;
 }
 
 #searchBar input {
   width: clamp(10rem, 30vw, 25rem);
-  color: red;
-  padding-block: 0.5rem;
+  /* padding-block: 1rem; */
   padding-inline: 1.5rem;
   border: none;
+  height: 2.25rem;
 }
 
 #searchBar input:focus {
@@ -226,7 +228,7 @@ body > main {
 }
 
 #searchBar button {
-  display: grid;
+  display: flex;
   place-items: center;
   border: none;
   background-color: var(--clr-green-100);

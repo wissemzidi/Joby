@@ -33,7 +33,7 @@
                 height="30"
                 alt=""
               />
-              <h6 style="font-size: 0.8rem">
+              <h6 style="font-size: 0.8rem; text-align: center;">
               <?php
                   echo ($logged_in)? $user->username : "Login";
               ?>
@@ -47,19 +47,19 @@
         <div id="side-bar__content">
           <ul>
             <li>
-              <a class="sideBarLink" href="./searchPage/index.html">Freelance</a>
+              <a href="./searchPage/index.html">Search</a>
             </li>
             <li>
-              <a class="sideBarLink" href="./searchPage/index.html"></a>
+              <a class="goToSearch" href="./searchPage/index.html">Freelance</a>
             </li>
             <li>
-              <a class="sideBarLink" href="./searchPage/index.html">Hire someone</a>
+              <a class="goToSearch" href="./searchPage/index.html">Popular</a>
             </li>
             <li>
-              <a class="sideBarLink" href="./searchPage/index.html">Popular</a>
+              <a class="goToSearch" href="#page4" onclick="hideAside.click()">About Us</a>
             </li>
             <li>
-              <a class="sideBarLink" href="#footer" onclick="hideAside.click()">Contact</a>
+              <a href="https://github.com/Wissem-Zidi/Joby">Source Code</a>
             </li>
           </ul>
         </div>
@@ -141,7 +141,7 @@
               <span id="hero__p__title">Joby</span> Your Way to find a Job
               <br />
               <br />
-              <a id="hero__join" href="#">Join Now</a>
+              <a id="hero__join" href="./signup/index.php">Join Now</a>
             </p>
             <div id="hero__suggestions">
               <ul>
@@ -169,22 +169,22 @@
       <section id="page2">
         <h2>Find Your interest</h2>
         <div id="page2__cards">
-          <a href="#" class="card">
+          <a class="card goToSearch" href="./searchPage/index.html">
             <h5>Editing</h5>
           </a>
-          <a href="#" class="card">
+          <a class="card goToSearch" href="./searchPage/index.html">
             <h5>Architecture</h5>
           </a>
-          <a href="#" class="card">
+          <a class="card goToSearch" href="./searchPage/index.html">
             <h5>Designer</h5>
           </a>
-          <a href="#" class="card">
+          <a class="card goToSearch" href="./searchPage/index.html">
             <h5>Developer</h5>
           </a>
-          <a href="#" class="card">
+          <a class="card goToSearch" href="./searchPage/index.html">
             <h5>healthcare</h5>
           </a>
-          <a href="#" class="card">
+          <a class="card goToSearch" href="./searchPage/index.html">
             <h5>Cyber security</h5>
           </a>
         </div>
@@ -198,40 +198,58 @@
       Page3-->
       <section id="page3">
         <div>
-          <h4>Clients Opinion</h4>
+          <center><h4 style="font-size: 1.5rem; font-family: var(--ff-netron)">Clients Opinion</h4></center>
         </div>
-        <div>
-          <ul>
-            <li>
-              <div id="img__wrapper">
-                <img src="#" alt="" />
+        <br>
+        <div id="p3__cards__container">
+          <ul class="p3__cards">
+            <li class="card card1">
+              <div class="card__img">
+                <img height="60" src="./project assets/img/client1.jpg" alt="" />
               </div>
-              <h4>Mohammed</h4>
-              <h6>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-                commodi.
-              </h6>
+              <h4 class="card__title">Jamie</h4>
+              <p class="card__text">
+                Im thankful to Joby. Now i have a job at Netflix.
+              </p>
+              <div class="p3__card__stars">
+                <img width="80" src="./project assets/svg/5 stars.svg" alt="">
+              </div>
             </li>
-            <li>
-              <div id="img__wrapper">
-                <img src="#" alt="" />
+            <li class="card card2">
+              <div class="card__img">
+                <img height="60" src="./project assets/img/client2.jpg" alt="" />
               </div>
-              <h4>Jack</h4>
-              <h6>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                unde cupiditate ut sit officia placeat ad eos dolor minima
-                ducimus!
-              </h6>
+              <h4 class="card__title">Jackson</h4>
+              <p class="card__text">
+                I have been searching for a job sins 2020, and now i had one.
+              </p>
+              <div class="p3__card__stars">
+                <img width="80" src="./project assets/svg/5 stars.svg" alt="">
+              </div>
             </li>
-            <li>
-              <div id="img__wrapper">
-                <img src="#" alt="" />
+            <li class="card card3">
+              <div class="card__img">
+                <img height="60" src="./project assets/img/client3.jpg" alt="" />
               </div>
-              <h4>Jackson</h4>
-              <h6>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                vero beatae, aspernatur eligendi necessitatibus quaerat!
-              </h6>
+              <h4 class="card__title">Jane</h4>
+              <p class="card__text">
+                It is a very good website But i there are no clients center to contact it.
+              </p>
+              <div class="p3__card__stars">
+                <img width="80" src="./project assets/svg/4 stars.svg" alt="">
+              </div>
+            </li>
+            <li class="card card4">
+              <div class="card__img">
+                <img height="60" src="./project assets/svg/accont.svg" alt="" />
+              </div>
+              <h4 class="card__title">Anna</h4>
+              <p class="card__text">
+                Not a bad idea, But i think you can make it more powerful and useful.
+              </p>
+              <div class="p3__card__stars">
+                <img width="80" src="./project assets/svg/3 stars.svg" alt="">
+              </div>
             </li>
           </ul>
         </div>

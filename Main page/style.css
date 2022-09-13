@@ -543,7 +543,59 @@ body > main {
 page3
 */
 #page3 {
-  min-height: 50vh;
+  height: fit-content;
+  width: 100%;
+  padding-block: 10vh 15rem;
+}
+
+#p3__cards__container {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.p3__cards {
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.p3__cards .card {
+  margin-top: 2rem;
+  text-align: center;
+  display: grid;
+  width: min(48%, 20rem);
+  background-color: rgba(61, 61, 61, 0.05);
+  border-radius: 5px;
+  padding-inline: clamp(0.5rem, 2vw, 1.5rem);
+  padding-block: 2rem;
+  padding-bottom: 4rem;
+}
+
+.card__img {
+  margin-top: -3.5rem;
+}
+
+.card__img img {
+  border-radius: 50%;
+}
+
+.card__title {
+  font-weight: 400;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.card__text {
+  margin-top: 2rem;
+  font-weight: normal;
+  font-size: 0.9rem;
 }
 
 /* 

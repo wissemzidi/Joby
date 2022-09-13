@@ -60,7 +60,6 @@ const pageContentInnerHtml = (name, email, id) => {
 };
 
 if (localStorage["searchLink"]) {
-  console.log("hello");
   searchInput.value = `${localStorage["searchLink"]}`;
   localStorage.clear("searchLink");
 }

@@ -6,11 +6,11 @@ const main = document.querySelector("main");
 const search = document.querySelector("#searchInput");
 const searchMenu = document.querySelector("#search__drop-down");
 const searchMenuContent = document.querySelector("#search__drop-down ul");
-const searchLinks = document.getElementsByClassName("sideBarLink");
+const goToSearch = document.getElementsByClassName("goToSearch");
 
-for (let i = 0; i < searchLinks.length; i++) {
-  searchLinks[i].addEventListener("click", (e) => {
-    localStorage.searchLink = `${searchLinks[i].textContent}`;
+for (let i = 0; i < goToSearch.length; i++) {
+  goToSearch[i].addEventListener("click", (e) => {
+    localStorage.searchLink = `${goToSearch[i].textContent.trim()}`;
   });
 }
 
@@ -25,6 +25,7 @@ window.addEventListener("scroll", function () {
     }, 200);
   }
 });
+
 toTopBtn.addEventListener("click", function () {
   window.scrollTo({
     top: 0,

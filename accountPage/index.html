@@ -9,8 +9,7 @@
   </head>
   <body>
     <main id="content">
-      <br />
-      <center><h1 style="font-weight: 400">Account</h1></center>
+      <center><h1 style="font-weight: 400; color: var(--clr-purple-100); font-family: var(--ff-netron);">Account</h1></center>
       <br />
       <header>
         <div id="account__img">
@@ -19,15 +18,17 @@
         </div>
         <div id="account__info">
           <h1>Wissem</h1>
-          <h4>Wissem Zidi</h4>
           <h5>wissem.zidi.ofc@gmail.com</h5>
         </div>
       </header>
-      <br />
+      <br>
+      <hr>
+      <br>
       <section id="hero">
         <div id="inputs">
           <form id="input" method="post">
             <label for="changeName">Change Name</label>
+            <br>
             <input
               name="name"
               id="changeName"
@@ -36,8 +37,10 @@
             />
             <button type="submit">Submit</button>
           </form>
+          <br>
           <form id="input" method="post">
-            <label for="changeEmail">Change email</label>
+            <label for="changeEmail">Change Email</label>
+            <br>
             <input
               name="email"
               id="changeEmail"
@@ -46,36 +49,54 @@
             />
             <button type="submit">Submit</button>
           </form>
+          <br>
+          <hr>
+          <br>
           <form id="input" method="post">
-            <h3>Change Password</h3>
+            <h3 style="font-weight: 400;
+            color: var(--clr-purple-100); 
+            font-family: var(--ff-netron);
+            text-align: center;">Change Password</h3>
+            <br>
             <div id="inputs">
               <label for="currentPwd">Current password</label>
+              <br>
               <input
+                style="width: 90%;
+                margin-inline: 1vw;"
                 id="currentPwd"
                 placeholder="Current Password"
-                type="text"
+                type="password"
               />
               <br />
+              <br>
               <label for="newPwd">New password</label>
+              <br />
               <input
+                style="width: 90%;
+                margin-inline: 1vw;"
                 name="newPwd"
                 id="newPwd"
                 placeholder="New Password"
-                type="text"
+                type="password"
               />
               <br />
+              <br>
               <label for="repeatPwd">Rewrite password</label>
+              <br>
               <input
+                style="width: 90%;
+                margin-inline: 1vw;"
                 name="repeatPwd"
                 id="repeatPwd"
                 placeholder="Password"
-                type="text"
+                type="password"
               />
             </div>
-            <button type="submit"></button>
+            <br>
+            <button style="text-align: center; margin-left: 20%;" type="submit">Submit password</button>
           </form>
         </div>
-        <button>Change Password</button>
       </section>
     </main>
   </body>

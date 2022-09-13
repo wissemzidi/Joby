@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ms+Madi&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("http://fonts.cdnfonts.com/css/netron");
 
 :root {
@@ -91,10 +91,52 @@ body > main > header {
   font-weight: normal;
 }
 
-@media screen and (max-width: 20rem) {
+@media screen and (max-width: 450px) {
   body > main > header {
     display: grid;
     justify-items: center;
-    gap: 1rem;
+    text-align: center;
   }
+}
+
+input[type="text"],
+input[type="password"] {
+  margin-top: 0.5rem;
+  width: 80%;
+  outline: 1px var(--clr-purple-100) solid;
+  background-color: transparent;
+  border: none;
+  font-weight: normal;
+  padding-inline: 1em;
+  padding-block: 0.5em;
+  margin-left: 1vw;
+  color: var(--clr-font);
+}
+
+@media screen and (max-width: 450px) {
+  button[type="submit"] {
+    margin-left: 1rem;
+    margin-block: 1rem;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width: 90%;
+  }
+}
+
+button[type="submit"] {
+  outline: 1px solid var(--clr-font);
+  background-color: transparent;
+  background-color: var(--clr-font);
+  color: var(--clr-background);
+  border: none;
+  padding-inline: 1em;
+  padding-block: 0.5em;
+  cursor: pointer;
+  transition: 0.2s ease-out background-color, outline 0.2s ease-out;
+}
+
+button[type="submit"]:where(:hover, :focus-visible) {
+  outline: 1px solid var(--clr-primary-200);
+  background-color: var(--clr-primary-200);
 }

@@ -11,6 +11,6 @@ for x in results:
     jobs.append(x.find('div',class_="base-search-card__info").find('h3',class_="base-search-card__title").text.replace(' ','').replace('\n',''))
 
 with open('result.html','w') as file:
-     file.write("\n".join(jobs))
+    file.write("\n".join(jobs))
 # with open('result.html','wb') as file:
     # file.write(content)

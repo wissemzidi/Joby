@@ -30,14 +30,19 @@
 
 body {
   background-color: var(--clr-background);
-  max-height: 100vh;
-  min-width: 100vw;
+  width: 100%;
+  display: grid;
+  justify-items: center;
   overflow-x: hidden;
+}
+
+body > main {
+  width: min(90rem, 100%);
 }
 
 form {
   padding: 1rem;
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   display: flex;
   justify-content: center;
@@ -82,92 +87,99 @@ form {
 /*  */
 
 #container {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   height: fit-content;
-  max-width: 40rem;
-  gap: 1rem;
+  width: min(85rem, 100%);
+  gap: 1.5rem;
   margin-inline: auto;
   margin-top: 1rem;
   padding-block: 1rem;
 }
 
-.inner {
+.card {
+  width: min(100%, 20rem);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 1.6;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url("../project assets/img/client2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card__titles {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card__titles h1 {
+  font-weight: 400;
+}
+
+.card__titles h5 {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.card__text {
+  padding-inline: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  max-height: 3.5rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.card__text p {
+  font-size: 0.9rem;
+}
+
+.card__footer {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  height: fit-content;
-  margin-inline: auto;
-  padding: 0.5em;
-  background-color: transparent;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  transition: 0.2s transform ease-out;
+  align-items: center;
 }
 
-.inner:hover {
-  transform: scale(1.05);
+.likes {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  cursor: pointer;
+  z-index: 1;
 }
 
-#inner__btn {
-  margin-block: auto;
-  transform: translateX(0);
-  transition: transform 0.2s ease-out;
-}
-
-.inner:where(:hover, :focus-visible) #inner__btn {
-  transform: translateX(-10px);
-}
-
-.inner:where(:hover, :focus-visible) #inner__btn a {
-  background-color: var(--clr-green-100);
-  color: var(--clr-background);
-  opacity: 1;
-}
-
-#inner__btn a {
-  text-decoration: none;
-  border-radius: 1em;
-  background-color: var(--clr-primary-100);
-  color: var(--clr-background);
-  padding: 0.25em 0.5em;
-  opacity: 0.75;
-  transition: background-color 0.3s ease-out, opacity 0.2s ease-out;
-}
-
-#container h1 {
-  color: var(--clr-purple-100);
+.likes h6 {
   font-weight: 400;
-  margin-left: 1rem;
+  font-size: 0.75rem;
 }
 
-.inner #inner__txt p {
+.contact__btn {
   width: fit-content;
-  color: var(--clr-font);
-  margin-left: 1rem;
-  font-weight: 300;
-  font-size: 0.7rem;
-  transition: 0.2s transform ease-out;
+  padding: 0.25em 0.7em;
+  background-color: var(--clr-font);
+  border-radius: 50px;
+  transition: background-color 0.2s ease-out;
 }
 
-.inner:hover #inner__txt p {
-  transform: translateX(20px) scale(1.1);
+.contact__btn:where(:hover, :focus-visible) {
+  background-color: var(--clr-purple-100);
 }
 
-@media screen and (max-width: 400px) {
-  #container {
-    padding-block: 0.25rem;
-  }
-  #container h1 {
-    margin-left: 0.1rem;
-  }
-  .inner {
-    width: 95%;
-    padding-inline: 0.25em;
-  }
-  .inner #inner__txt p {
-    margin-left: 2vw;
-  }
-  .inner:hover #inner__txt p {
-    transform: translateX(10px) scale(1.1);
-  }
+.contact__btn a {
+  font-size: 0.9rem;
+  color: var(--clr-background);
+  text-decoration: none;
 }

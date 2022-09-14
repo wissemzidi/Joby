@@ -1,88 +1,95 @@
-// Data
-let users = {
-  user0: {
-    name: "Wissem",
-    email: "wissem@gmail.com",
-  },
-  user1: {
-    name: "Omar",
-    email: "omar@gmail.com",
-  },
-  user2: {
-    name: "sdf",
-    email: "sdfezf@gmail.com",
-  },
-  user3: {
-    name: "ahmeds",
-    email: "room@gmail.com",
-  },
-  user4: {
-    name: "Farah",
-    email: "-->",
-  },
-  user5: {
-    name: "Youssef",
-    email: "ccccc@gmail.com",
-  },
-  user6: {
-    name: "Ahmed",
-    email: "ahmedwarteni@yahoo.com",
-  },
-  user7: {
-    name: "Chehin",
-    email: "chehinzakraoui.123@gmail.com",
-  },
-  user8: {
-    name: "Hamdi",
-    email: "Hamdi...@gmail.com",
-  },
-  user9: {
-    name: "Hamza",
-    email: "hamzazidi@gmail.com",
-  },
-};
-
 // const
 const searchInput = document.querySelector("#search__input");
+const submit = document.querySelector(".searchBtn");
+const form = document.querySelector("form");
 const container = document.querySelector("#container");
-const pageContentInnerHtml = (name, email, id) => {
-  content = `
-  <div id="${id}" class="inner">
-    <div id="inner__txt">
-      <h1>${name}</h1>
-      <p>${email}</p>
-    </div>
-    <div id="inner__btn">
-      <a href="${"../index.php"}" title="More">${"Join"}</a>
-    </div>
-  </div>`;
-  return content;
-};
+const like = document.querySelectorAll(".likes");
 
 if (localStorage["searchLink"]) {
   searchInput.value = `${localStorage["searchLink"]}`;
   localStorage.clear("searchLink");
 }
 
-// loop
-for (let i = 0; i < Object.keys(users).length; i++) {
-  // let user = users["user" + i];
-  let user = users[`user${i}`];
-  container.innerHTML += pageContentInnerHtml(user.name, user.email, i);
-}
-
-// listen
-searchInput.addEventListener("keyup", (event) => {
-  for (let i = 0; i < Object.keys(users).length; i++) {
-    let user = users[`user${i}`];
-    let chain = user.name + user.email;
-    chain = chain.toLowerCase();
-    if (!chain.includes(searchInput.value.toLowerCase())) {
-      document.getElementById(i).style.display = "none";
-    } else {
-      document.getElementById(i).style.display = "flex";
-    }
+window.addEventListener("click", (e) => {
+  console.log(e.target.parentElement);
+  if (
+    e.target.parentElement.classList.contains("likes") &&
+    !e.target.parentElement.classList.contains("liked")
+  ) {
+    let like = e.target.parentElement;
+    like.classList.toggle("liked");
+    like.children[0].src = "../project assets/svg/heart(colored).svg";
+    like.children[1].innerText = Number(like.children[1].innerText) + 1;
+  } else if (
+    e.target.parentElement.classList.contains("likes") &&
+    e.target.parentElement.classList.contains("liked")
+  ) {
+    let like = e.target.parentElement;
+    like.classList.toggle("liked");
+    like.children[0].src = "../project assets/svg/heart.svg";
+    like.children[1].innerText = Number(like.children[1].innerText) - 1;
   }
 });
+
+const pageContentInnerHtml = (
+  name,
+  mail,
+  price,
+  text,
+  link,
+  likes,
+  number,
+  is_liked
+) => {
+  let svgLink = "../project assets/svg/heart.svg";
+  if (is_liked) {
+    svgLink = "../project assets/svg/heart(colored).svg";
+    is_liked = "liked";
+  } else {
+    is_liked = "";
+  }
+  content = `
+    <div class="card card${number}">
+      <div class="card__img card${number}__img">
+      </div>
+      <div class="card__titles">
+        <h1>${name}</h1>
+        <h5>${mail}</h5>
+      </div>
+      <div class="card__text">
+        <p>
+          ${text}
+        </p>
+      </div>
+      <div class="card__footer">
+        <div class="likes ${is_liked}">
+          <img class="like__btn" height="25" src="${svgLink}" alt="">
+          <h6>${likes}</h6>
+        </div>
+        <div class="contact__btn">
+          <a href="${link}" title="More">See More</a>
+        </div>
+      </div>
+      <hr>
+      <center><div class="prices">
+        <h6 style="font-weight: 300; font-size: .9rem; padding: .5em;">pricing : ${price}$</h6>
+      </div></center>
+      </div>
+  `;
+  return content;
+};
+
+for (let i = 0; i < 8; i++) {
+  container.innerHTML += pageContentInnerHtml(
+    "Wissem",
+    "WissemZidi@gmail.com",
+    "25",
+    "i will build for you a full responsive web site front-end.",
+    "8",
+    "5",
+    i.toString,
+    true
+  );
+}
 
 // function

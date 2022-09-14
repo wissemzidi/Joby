@@ -50,10 +50,10 @@
               <a href="./accountPage/index.php">Set interests</a>
             </li>
             <li>
-              <a class="goToSearch" href="./searchPage/index.html">Freelance</a>
+              <a class="goToSearch" href="./searchPage/index.php">Freelance</a>
             </li>
             <li>
-              <a class="goToSearch" href="./searchPage/index.html">Popular</a>
+              <a class="goToSearch" href="./searchPage/index.php">Popular</a>
             </li>
             <li>
               <a class="goToSearch" href="#page4" onclick="hideAside.click()">About Us</a>
@@ -108,7 +108,7 @@
               type="search"
               autocomplete="off"
             />
-            <button type="submit" id="searchBtn" onclick="window.location.href = './searchPage/index.html'">
+            <button type="submit" id="searchBtn" onclick="window.location.href = './searchPage/index.php'">
               <img
                 title="search"
                 height="15"
@@ -145,10 +145,10 @@
             </p>
             <div id="hero__suggestions">
               <ul>
-                <li><a class="goToSearch" href="./searchPage/index.html">Freelance</a></li>
-                <li><a class="goToSearch" href="./searchPage/index.html">Back-end</a></li>
-                <li><a class="goToSearch" href="./searchPage/index.html">Designer</a></li>
-                <li><a class="goToSearch" href="./searchPage/index.html">Front-end</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.php">Freelance</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.php">Back-end</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.php">Designer</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.php">Front-end</a></li>
               </ul>
             </div>
           </div>
@@ -169,22 +169,22 @@
       <section id="page2">
         <h2>Find Your interest</h2>
         <div id="page2__cards">
-          <a class="card goToSearch" href="./searchPage/index.html">
+          <a class="card goToSearch" href="./searchPage/index.php">
             <h5>Editing</h5>
           </a>
-          <a class="card goToSearch" href="./searchPage/index.html">
+          <a class="card goToSearch" href="./searchPage/index.php">
             <h5>Architecture</h5>
           </a>
-          <a class="card goToSearch" href="./searchPage/index.html">
+          <a class="card goToSearch" href="./searchPage/index.php">
             <h5>Designer</h5>
           </a>
-          <a class="card goToSearch" href="./searchPage/index.html">
+          <a class="card goToSearch" href="./searchPage/index.php">
             <h5>Developer</h5>
           </a>
-          <a class="card goToSearch" href="./searchPage/index.html">
+          <a class="card goToSearch" href="./searchPage/index.php">
             <h5>healthcare</h5>
           </a>
-          <a class="card goToSearch" href="./searchPage/index.html">
+          <a class="card goToSearch" href="./searchPage/index.php">
             <h5>Cyber security</h5>
           </a>
         </div>

@@ -37,6 +37,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="#" />
+    <link rel="icon" type="image/x-icon" href="../project assets/logo/logo(light).svg">
     <script src="main.js" defer></script>
     <title>Sign Up</title>
   </head>

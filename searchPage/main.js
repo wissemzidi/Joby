@@ -11,7 +11,6 @@ if (localStorage["searchLink"]) {
 }
 
 window.addEventListener("click", (e) => {
-  console.log(e.target.parentElement);
   if (
     e.target.parentElement.classList.contains("likes") &&
     !e.target.parentElement.classList.contains("liked")
@@ -79,7 +78,7 @@ const pageContentInnerHtml = (
   return content;
 };
 
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 10; i++) {
   container.innerHTML += pageContentInnerHtml(
     "Wissem",
     "WissemZidi@gmail.com",

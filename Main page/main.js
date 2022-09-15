@@ -73,3 +73,16 @@ searchMenuContent.innerHTML = `
 window.onscroll = function (e) {
   showAside.style.display = "block";
 };
+
+const observer = new IntersectionObserver((e) => {
+  e.forEach((el) => {
+    if (el.isIntersecting) {
+      el.target.classList.add("visible");
+    } else {
+      el.target.classList.remove("visible");
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".not_visible");
+hiddenElements.forEach((e) => observer.observe(e));

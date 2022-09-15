@@ -77,7 +77,7 @@
     main-->
     <main id="content">
       <section id="hero">
-        <header id="header">
+        <header id="header" class="not_visible">
           <button id="showSideBar">
             <img
               title="side Bar"
@@ -137,7 +137,7 @@
           </div>
         </header>
         <section id="hero-content">
-          <div>
+          <div class="not_visible">
             <p id="hero__p">
               <span id="hero__p__title">Joby</span> Your Way to find a Job
               <br />
@@ -154,7 +154,7 @@
             </div>
           </div>
           <div>
-            <div id="hero__img">
+            <div id="hero__img" class="not_visible">
               <img src="./project assets/img/hero-illustration.svg" alt="" />
             </div>
           </div>
@@ -167,7 +167,7 @@
 
 
       page2-->
-      <section id="page2">
+      <section id="page2" class="not_visible">
         <h2>Find Your interest</h2>
         <div id="page2__cards">
           <a class="card goToSearch" href="./searchPage/index.php">
@@ -197,7 +197,7 @@
 
 
       Page3-->
-      <section id="page3">
+      <section id="page3" class="not_visible">
         <div>
           <center><h4 style="font-size: 1.5rem; font-family: var(--ff-netron)">Clients Opinion</h4></center>
         </div>
@@ -264,7 +264,7 @@
 
 
       -->
-      <section id="page4" class="full-bleed">
+      <section id="page4" class="full-bleed not_visible">
         <div id="p4__content">
           <h2>About-Us</h2>
           <div id="p4__text">
@@ -294,7 +294,7 @@
 
 
       -->
-      <footer id="footer">
+      <footer id="footer" class="not_visible">
         <div class="footer-dark full-bleed">
           <div class="container">
             <div class="row">

@@ -101,6 +101,14 @@ form {
 .card {
   width: min(100%, 20rem);
   background-color: rgba(0, 0, 0, 0.05);
+  transition: scale 0.1s ease-out;
+}
+
+@media screen and (max-width: 731px) {
+  .card {
+    margin-inline: 5vw;
+    width: clamp(20rem, 80vw, 30rem);
+  }
 }
 
 .card__img {
@@ -109,8 +117,13 @@ form {
   background-color: rgba(0, 0, 0, 0.1);
   background-image: url("../project assets/img/client2.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
+  transition: background-size 0.2s ease-out;
+}
+
+.card:hover .card__img {
+  background-size: 105%;
 }
 
 .card__titles {

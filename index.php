@@ -117,9 +117,9 @@
                 alt="Submit"
               />
             </button>
-            <div id="search__drop-down">
+            <!-- <div id="search__drop-down">
               <ul id="search__Menu__content"></ul>
-            </div>
+            </div> -->
           </div>
           <div id="navigation">
             <ul id="navigation__ul">

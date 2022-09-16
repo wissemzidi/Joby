@@ -95,27 +95,27 @@
                 <a href="#"
                   ><img
                     height="30"
-                    src="./project assets/svg/facebook.svg"
+                    src="../project assets/svg/facebook.svg"
                     alt=""
                 /></a>
                 <a href="#">
                   <img
                     height="30"
-                    src="./project assets/svg/instagram.svg"
+                    src="../project assets/svg/instagram.svg"
                     alt=""
                   />
                 </a>
                 <a href="#">
                   <img
                     height="30"
-                    src="./project assets/svg/email.svg"
+                    src="../project assets/svg/email.svg"
                     alt=""
                   />
                 </a>
                 <a href="https://github.com/Wissem-Zidi/Joby">
                   <img
                     height="30"
-                    src="./project assets/svg/github.svg"
+                    src="../project assets/svg/github.svg"
                     alt=""
                   />
                 </a>

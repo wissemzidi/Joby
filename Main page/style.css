@@ -63,11 +63,9 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    height: 1rem;
   }
   100% {
     opacity: 1;
-    height: fit-content;
   }
 }
 
@@ -182,7 +180,6 @@ body > main {
   backdrop-filter: blur(1px);
   border-radius: 5px;
   border: none;
-  display: grid;
   margin-top: 0.5rem;
   cursor: pointer;
   z-index: 1;

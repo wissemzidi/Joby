@@ -28,16 +28,9 @@
             background-color: transparent; 
             border: 1px rgba(0, 0, 0, 0.2) solid; 
             outline: none;">
-            <option value="">Choose interest</option>
-            <option value="graphic design">Graphic & Design</option>
-            <option value="develop">Develop</option>
-            <option value="architect">Architect</option>
-            <option value="editing">Editing</option>
-            <option value="business">Business</option>
-            <option value="wordpress">WordPress</option>
-            <option value="marketing">Marketing</option>
-            <option value="music">Music & Audio</option>
-            <option value="data">Data</option>
+            <option value="">What are you ?</option>
+            <option value="graphic design">Worker</option>
+            <option value="develop">Hiring manager</option>
           </select>
         </div>
       </header>

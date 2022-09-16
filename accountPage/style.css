@@ -80,7 +80,6 @@ body > main > header {
 #account__info {
   display: grid;
   height: fit-content;
-  gap: 0.5rem;
 }
 
 #account__info:nth-child(1) {
@@ -89,6 +88,23 @@ body > main > header {
 
 #account__info > * {
   font-weight: normal;
+}
+
+#dash-board-btn {
+  margin-top: 0.5rem;
+  background-color: var(--clr-font);
+  color: var(--clr-background);
+  outline: 1px solid var(--clr-font);
+  width: fit-content;
+  padding-inline: 1rem;
+  padding-block: 0.2rem;
+  border-radius: 50px;
+  transition: background-color 0.2s ease-out, outline 0.2s ease-out;
+}
+
+#dash-board-btn:where(:hover, :focus-visible) {
+  outline: 1px solid var(--clr-primary-200);
+  background-color: var(--clr-primary-200);
 }
 
 @media screen and (max-width: 450px) {

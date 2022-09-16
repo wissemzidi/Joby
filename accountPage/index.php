@@ -24,7 +24,7 @@
         <div id="account__info">
           <h1><?=$user->username?></h1>
           <h5><?=$user->email?></h5>
-          <select id="interest" name="interest" style="margin-top: 0.5rem; 
+          <select id="interest" name="interest" style="margin-block: 1rem; 
             background-color: transparent; 
             border: 1px rgba(0, 0, 0, 0.2) solid; 
             outline: none;">
@@ -32,6 +32,7 @@
             <option value="graphic design">Worker</option>
             <option value="develop">Hiring manager</option>
           </select>
+          <!-- <center><a href="../dashBoard/index.php" id="dash-board-btn">Dash Board</a></center> -->
         </div>
       </header>
       <br>
@@ -120,17 +121,6 @@
                 type="password"
               />
               <br />
-              <!-- <br> -->
-              <!-- <label for="repeatPwd">Rewrite password</label>
-              <br>
-              <input
-                style="width: 90%;
-                margin-inline: 1vw;"
-                name="repeatPwd"
-                id="repeatPwd"
-                placeholder="Password"
-                type="password"
-              /> -->
             </div>
             <br>
             <center>

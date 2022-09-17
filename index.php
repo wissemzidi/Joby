@@ -89,7 +89,7 @@
               alt=">"
             />
           </button>
-          <h2 id="title">Joby</h2>
+          <h2 id="title"><a href="./index.php">Joby</a></h2>
           <a href="<?php echo ($logged_in)? "./accountPage/" : "./signin/";  ?>" id="login">
             <img
               title="Account"

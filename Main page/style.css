@@ -191,13 +191,13 @@ body > main {
 }
 
 #title {
-  font-family: "Netron", sans-serif;
-  font-weight: 400;
   grid-area: title;
   gap: 0.75rem;
 }
 
 #title a {
+  font-weight: 400;
+  font-family: "Netron", sans-serif;
   color: var(--clr-font);
 }
 

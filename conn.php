@@ -5,8 +5,8 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 $server = "localhost";
-$username = "root";
-$password = "";
+$username = (getenv("JOBY_DB_USERNAME") !== false) ? getenv("JOBY_DB_USERNAME") : "root";
+$password = (getenv("JOBY_DB_PASSWORD") !== false) ? getenv("JOBY_DB_PASSWORD") : "";
 $db = "joby";
 $conn = new mysqli($server, $username, $password,$db) or die("ERROR #0001");
 

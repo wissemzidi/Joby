@@ -51,6 +51,11 @@ body > main {
   text-decoration: none;
   border-radius: 50px;
   padding: 0.2rem 0.4rem;
+  transition: background-color 0.2s ease-out;
+}
+
+.home-btn:where(:hover, :focus-visible) {
+  background-color: var(--clr-purple-100);
 }
 
 form {
@@ -193,10 +198,14 @@ form {
 }
 
 .contact__btn {
+  display: grid;
+  align-items: center;
   width: fit-content;
-  padding: 0.25em 0.7em;
+  height: fit-content;
+  padding: 0.3em 0.6em;
+  text-align: center;
   background-color: var(--clr-font);
-  border-radius: 50px;
+  border-radius: 50em;
   transition: background-color 0.2s ease-out;
 }
 

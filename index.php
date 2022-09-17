@@ -7,8 +7,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="http://fonts.cdnfonts.com/css/netron" rel="stylesheet">
     <link rel="stylesheet" href="./Main page/style.css" />
     <link rel="stylesheet" href="./Main page/media.css" />
+    <meta property="og:title" content="Joby">
+    <meta property="og:image" content="./project assets/logo/logo(light).svg">
     <link rel="icon" type="image/x-icon" href="./project assets/logo/logo(light).svg">
     <title>Joby</title>
   </head>

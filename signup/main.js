@@ -115,7 +115,6 @@ submitBtn.addEventListener("click", () => {
     }, 2000);
   }
   if (nameInput.value.length >= 4) {
-    console.log("valid name");
     nameInput.className = "valid";
   } else {
     nameInput.className = "invalid";

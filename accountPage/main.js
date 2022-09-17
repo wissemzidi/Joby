@@ -1,5 +1,5 @@
 const interest = document.querySelector("#interest");
-console.log(interest);
+
 if (Boolean(window.localStorage["interestFocus"]) === true) {
   shine(interest);
   window.localStorage.removeItem("interestFocus");

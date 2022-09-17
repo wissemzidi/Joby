@@ -10,8 +10,6 @@ const goToSearch = document.getElementsByClassName("goToSearch");
 const searchBtn = document.getElementById("searchBtn");
 const focusOn = document.querySelector(".interests");
 
-console.log(focusOn);
-
 for (let i = 0; i < goToSearch.length; i++) {
   goToSearch[i].addEventListener("click", (e) => {
     localStorage.searchLink = `${goToSearch[i].textContent.trim()}`;

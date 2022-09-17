@@ -51,6 +51,22 @@ body > main > header {
   gap: 1rem;
 }
 
+.simple-btn {
+  display: grid;
+  place-items: center;
+  height: fit-content;
+  padding-block: 0.3em;
+  padding-inline: 0.6em;
+  color: var(--clr-background);
+  background-color: var(--clr-font);
+  border-radius: 50px;
+  transition: background-color 0.2s ease-out;
+}
+
+.simple-btn:where(:hover, :focus-visible) {
+  background-color: var(--clr-primary-200);
+}
+
 #account__img {
   position: relative;
   width: fit-content;

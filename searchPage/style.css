@@ -29,6 +29,7 @@
 }
 
 body {
+  position: relative;
   background-color: var(--clr-background);
   width: 100%;
   display: grid;
@@ -38,6 +39,18 @@ body {
 
 body > main {
   width: min(90rem, 100%);
+}
+
+.home-btn {
+  position: absolute;
+  top: 1.25rem;
+  left: 1vw;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  background-color: var(--clr-font);
+  color: var(--clr-background);
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 0.2rem 0.4rem;
 }
 
 form {

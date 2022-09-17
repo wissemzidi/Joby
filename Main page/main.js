@@ -8,6 +8,9 @@ const searchMenu = document.querySelector("#search__drop-down");
 const searchMenuContent = document.querySelector("#search__drop-down ul");
 const goToSearch = document.getElementsByClassName("goToSearch");
 const searchBtn = document.getElementById("searchBtn");
+const focusOn = document.querySelector(".interests");
+
+console.log(focusOn);
 
 for (let i = 0; i < goToSearch.length; i++) {
   goToSearch[i].addEventListener("click", (e) => {
@@ -29,13 +32,17 @@ search.addEventListener("focus", (e) => {
   });
 });
 
+focusOn.addEventListener("click", function (e) {
+  localStorage.setItem("interestFocus", true);
+});
+
 /* on click search btn save the input value on local storage */
 searchBtn.addEventListener("click", (e) => {
   localStorage.searchLink = `${search.value.trim()}`;
 });
 
 window.addEventListener("scroll", function () {
-  if (window.matchMedia("(min-width: 50rem)").matches) {
+  if (window.matchMedia("(min-width: 40rem)").matches) {
     if (window.scrollY >= 600) {
       showAside.style.display = "grid";
       showAside.firstElementChild.style.display = "grid";

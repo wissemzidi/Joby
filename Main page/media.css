@@ -1,4 +1,4 @@
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 40rem) {
   #showSideBar {
     top: 0.5rem;
     left: 0.5rem;
@@ -13,12 +13,6 @@
   }
   #navigation {
     display: none;
-  }
-  #showSideBar {
-    display: grid;
-  }
-  #showSideBar img {
-    display: block;
   }
   #login {
     display: grid;
@@ -59,6 +53,12 @@
   #title {
     display: grid;
     place-items: center;
+  }
+  #showSideBar {
+    display: grid;
+  }
+  #showSideBar img {
+    display: block;
   }
   #searchBar {
     margin-inline: 0;

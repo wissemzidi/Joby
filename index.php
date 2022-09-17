@@ -48,16 +48,16 @@
         <div id="side-bar__content">
           <ul>
             <li>
-              <a href="./accountPage/index.php">Set interests</a>
+              <a class="interests" href="./accountPage/index.php">Set interests</a>
             </li>
             <li>
               <a class="goToSearch" href="./searchPage/index.php">Freelance</a>
             </li>
             <li>
-              <a class="goToSearch" href="./searchPage/index.php">Popular</a>
+              <a href="#page2" onclick="hideAside.click()">Popular</a>
             </li>
             <li>
-              <a class="goToSearch" href="#page4" onclick="hideAside.click()">About Us</a>
+              <a href="#page4" onclick="hideAside.click()">About Us</a>
             </li>
             <li>
               <a href="https://github.com/Wissem-Zidi/Joby">Source Code</a>
@@ -123,9 +123,9 @@
           </div>
           <div id="navigation">
             <ul id="navigation__ul">
-              <li><a href="#">Info</a></li>
-              <li><a href="#">About-us</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#page2">Popular</a></li>
+              <li><a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=wissem.zidi.contact@gmail.com">Contact</a></li>
+              <li><a href="#page4" onclick="hideAside.click()">About</a></li>
               <li>
                 <a id="login-wide-screen" href="<?php echo ($logged_in)? "./accountPage/" : "./signin/";  ?>">
                   <?php
@@ -146,10 +146,10 @@
             </p>
             <div id="hero__suggestions">
               <ul>
-                <li><a class="goToSearch" href="./searchPage/index.php">Freelance</a></li>
-                <li><a class="goToSearch" href="./searchPage/index.php">Back-end</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.php">Back End</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.php">Front End</a></li>
                 <li><a class="goToSearch" href="./searchPage/index.php">Designer</a></li>
-                <li><a class="goToSearch" href="./searchPage/index.php">Front-end</a></li>
+                <li><a class="goToSearch" href="./searchPage/index.php">Full Stack</a></li>
               </ul>
             </div>
           </div>
@@ -337,7 +337,7 @@
                     alt=""
                   />
                 </a>
-                <a href="#">
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=wissem.zidi.contact@gmail.com">
                   <img
                     height="30"
                     src="./project assets/svg/email.svg"

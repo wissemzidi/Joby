@@ -14,7 +14,10 @@
   </head>
   <body>
     <main id="content">
-      <center><h1 style="font-weight: 400; color: var(--clr-purple-100); font-family: var(--ff-netron);">Account</h1></center>
+      <section id="page__title" style="display: flex;">
+        <a href="../index.php" class="simple-btn">Home</a>
+        <h1 style="margin-inline: auto;font-size: 2rem; font-weight: 400; color: var(--clr-purple-100); font-family: var(--ff-netron);">Account</h1>
+      </section>
       <br />
       <header>
         <div id="account__img">
@@ -25,9 +28,9 @@
           <h1><?=$user->username?></h1>
           <h5><?=$user->email?></h5>
           <select id="interest" name="interest" style="margin-block: 1rem; 
-            background-color: transparent; 
+            background-color: var(--clr-background); 
             border: 1px rgba(0, 0, 0, 0.2) solid; 
-            outline: none;">
+            outline: transparent; transition: 0.5s background-color ease-out">
             <option value="">What are you ?</option>
             <option value="graphic design">Worker</option>
             <option value="develop">Hiring manager</option>

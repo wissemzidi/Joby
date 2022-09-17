@@ -386,6 +386,7 @@ body > main {
 #hero__suggestions ul {
   display: flex;
   justify-content: center;
+  justify-items: center;
   list-style: none;
   gap: 1vw;
 }

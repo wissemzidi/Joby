@@ -10,6 +10,7 @@
     <title>Learning js</title>
   </head>
   <body>
+    <a class="home-btn" href="../index.php"><<</a>
     <main>
       <form id="form" method="POST" action="" onsubmit="return false">
         <div class="search">

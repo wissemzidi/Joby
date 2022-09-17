@@ -596,6 +596,53 @@ page3
   font-weight: normal;
   font-size: 0.9rem;
 }
+/* 
+
+
+
+
+
+
+
+
+
+page3_*/
+
+#page3_ {
+  position: relative;
+  margin-inline: auto;
+  margin-bottom: 10rem;
+  width: min(100%, 80rem);
+  min-height: 20rem;
+  display: grid;
+  justify-items: left;
+}
+
+#page3_::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../project assets/img/bg-page3_.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: grayscale(0.5) blur(1px);
+  z-index: -1;
+}
+
+#page3_ div {
+  height: fit-content;
+  width: clamp(100%, 30rem);
+  margin-top: auto;
+  padding: 2rem 2vw;
+}
+
+#page3_ div p {
+  height: fit-content;
+  text-align: left;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: var(--clr-background);
+  text-align: center;
+}
 
 /* 
 

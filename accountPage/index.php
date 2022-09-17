@@ -15,7 +15,7 @@
   <body>
     <main id="content">
       <section id="page__title" style="display: flex;">
-        <a href="../index.php" class="simple-btn">Home</a>
+        <a href="../index.php" class="simple-btn"><<</a>
         <h1 style="margin-inline: auto;font-size: 2rem; font-weight: 400; color: var(--clr-purple-100); font-family: var(--ff-netron);">Account</h1>
       </section>
       <br />

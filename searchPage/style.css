@@ -85,6 +85,7 @@ form {
   width: min(100%, 30rem);
   padding: 0.4rem 0.7rem;
   font-weight: 300;
+  font-size: 0.9rem;
   border: none;
   outline: none;
 }

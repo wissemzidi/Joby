@@ -4,6 +4,9 @@ const submit = document.querySelector(".searchBtn");
 const form = document.querySelector("form");
 const container = document.querySelector("#container");
 const like = document.querySelectorAll(".likes");
+let starsImg = null;
+let starsNb = null;
+let starImgSrc = null;
 
 if (localStorage["searchLink"]) {
   searchInput.value = `${localStorage["searchLink"]}`;
@@ -36,17 +39,11 @@ const pageContentInnerHtml = (
   price,
   text,
   link,
-  likes,
-  number,
-  is_liked
+  starsNb,
+  starImgSrc,
+  number
 ) => {
-  let svgLink = "../project assets/svg/heart.svg";
-  if (is_liked) {
-    svgLink = "../project assets/svg/heart(colored).svg";
-    is_liked = "liked";
-  } else {
-    is_liked = "";
-  }
+  starImgSrc = selectStars(starsNb);
   content = `
     <div class="card card${number}">
       <div class="card__img card${number}__img">
@@ -61,9 +58,8 @@ const pageContentInnerHtml = (
         </p>
       </div>
       <div class="card__footer">
-        <div class="likes ${is_liked}">
-          <img class="like__btn" height="25" src="${svgLink}" alt="">
-          <h6>${likes}</h6>
+        <div class="likes">
+          <img class="stars-img" width="80" src="${starImgSrc}" alt="">
         </div>
         <div class="contact__btn">
           <a href="${link}" title="More">See More</a>
@@ -80,15 +76,35 @@ const pageContentInnerHtml = (
 
 for (let i = 0; i < 10; i++) {
   container.innerHTML += pageContentInnerHtml(
-    "Wissem",
-    "WissemZidi@gmail.com",
-    "25",
-    "i will build for you a full responsive web site front-end.",
-    "8",
-    "5",
-    i.toString,
-    true
+    "Wissem" /* name */,
+    "WissemZidi@gmail.com" /* gmail */,
+    "25" /* price */,
+    "i will build for you a full responsive web site front-end." /* presentation paragraph */,
+    "8" /* page link to see the offer */,
+    "2" /* nb of stars */,
+    i.toString /* not for you */
   );
 }
 
-// function
+// Function
+function selectStars(starsNb) {
+  let starImgSrc;
+  switch (Number(starsNb)) {
+    case 1:
+      starImgSrc = "../project assets/svg/1 stars.svg";
+      break;
+    case 2:
+      starImgSrc = "../project assets/svg/2 stars.svg";
+      break;
+    case 3:
+      starImgSrc = "../project assets/svg/3 stars.svg";
+      break;
+    case 4:
+      starImgSrc = "../project assets/svg/4 stars.svg";
+      break;
+    case 5:
+      starImgSrc = "../project assets/svg/5 stars.svg";
+      break;
+  }
+  return starImgSrc;
+}

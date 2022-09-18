@@ -19,37 +19,123 @@ require '../funcs.php';
     <header>
       <div id="account__img">
         <img height="100" src="../accountPage/img/logo.jpg" alt="Img" />
-        <!-- <input type="file" accept="image/*" id="changeImg"></input> -->
+        <input id="changeImg" style="display: none;" type="file" accept="image/*"></input>
+        <div id="fake-input">Change Photo</div>
       </div>
       <div id="account__info">
         <h1><?= $user->username ?></h1>
         <h5><?= $user->email ?></h5>
         <hr style="margin-block: .5rem;">
         <p>
-          <h4>number of work : 5</h4>
-          <h4></h4>
+        <h4>number of work : 5</h4>
+        <h4>Other info</h4>
         </p>
       </div>
     </header>
-    <br>
     <main id="content">
+      <br>
       <div class="hero__title">
         <h2>Work</h2>
       </div>
       <div class="hero__cards">
         <ul class="cards">
+          <!-- card template -->
           <li class="card card1">
             <div class="card__img">
-              <img height="60" src="../project assets/svg/accont.svg" alt="" />
+              <img height="60" src="../project assets/img/client3.jpg" alt="" />
+              <input value="0" type="range" min="0" max="3">
             </div>
             <h4 class="card__title">Anna</h4>
             <p class="card__text">
               Not a bad idea, But i think you can make it more powerful and useful.
             </p>
-            <div class="p3__card__stars">
-              <img width="80" src="./project assets/svg/3 stars.svg" alt="">
-            </div>
           </li>
+          <!--  -->
+          <!-- card template -->
+          <li class="card card1">
+            <div class="card__img">
+              <img height="60" src="../project assets/img/client3.jpg" alt="" />
+              <input value="0" type="range" min="0" max="3">
+            </div>
+            <h4 class="card__title">Anna</h4>
+            <p class="card__text">
+              Not a bad idea, But i think you can make it more powerful and useful.
+            </p>
+          </li>
+          <!--  -->
+          <!-- card template -->
+          <li class="card card1">
+            <div class="card__img">
+              <img height="60" src="../project assets/img/client3.jpg" alt="" />
+              <input value="0" type="range" min="0" max="3">
+            </div>
+            <h4 class="card__title">Anna</h4>
+            <p class="card__text">
+              Not a bad idea, But i think you can make it more powerful and useful.
+            </p>
+          </li>
+          <!--  -->
+          <!-- card template -->
+          <li class="card card1">
+            <div class="card__img">
+              <img height="60" src="../project assets/img/client3.jpg" alt="" />
+              <input value="0" type="range" min="0" max="3">
+            </div>
+            <h4 class="card__title">Anna</h4>
+            <p class="card__text">
+              Not a bad idea, But i think you can make it more powerful and useful.
+            </p>
+          </li>
+          <!--  -->
+          <!-- card template -->
+          <li class="card card1">
+            <div class="card__img">
+              <img height="60" src="../project assets/img/client3.jpg" alt="" />
+              <input value="0" type="range" min="0" max="3">
+            </div>
+            <h4 class="card__title">Anna</h4>
+            <p class="card__text">
+              Not a bad idea, But i think you can make it more powerful and useful.
+            </p>
+          </li>
+          <!--  -->
+          <!-- card template -->
+          <li class="card card1">
+            <div class="card__img">
+              <img height="60" src="../project assets/img/client3.jpg" alt="" />
+              <input value="0" type="range" min="0" max="3">
+            </div>
+            <h4 class="card__title">Anna</h4>
+            <p class="card__text">
+              Not a bad idea, But i think you can make it more powerful and useful.
+            </p>
+          </li>
+          <!--  -->
+          <!-- card template -->
+          <li class="card card1">
+            <div class="card__img">
+              <img height="60" src="../project assets/img/client3.jpg" alt="" />
+              <input value="0" type="range" min="0" max="3">
+            </div>
+            <h4 class="card__title">Anna</h4>
+            <p class="card__text">
+              Not a bad idea, But i think you can make it more powerful and useful.
+            </p>
+          </li>
+          <!--  -->
+          <!-- card template -->
+          <li class="card card1">
+            <div class="card__img">
+              <img height="60" src="../project assets/img/client3.jpg" alt="" />
+              <input value="0" type="range" min="0" max="3">
+            </div>
+            <h4 class="card__title">Anna</h4>
+            <p class="card__text">
+              Not a bad idea, But i think you can make it more powerful and useful.
+            </p>
+          </li>
+          <!--  -->
+          <!-- card template -->
         </ul>
       </div>
     </main>

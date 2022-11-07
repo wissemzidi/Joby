@@ -1,6 +1,6 @@
 # Read Me
 
-## [👀 Live-Server](http://23.94.202.189/)
+## [👀 Live-Server](http://squar3.me)
 
 <img src="./preview.png" alt="">
 

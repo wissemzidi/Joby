@@ -35,7 +35,7 @@
             <option value="graphic design">Worker</option>
             <option value="develop">Hiring manager</option>
           </select>
-          <center><a href="../dashBoard/index.php" id="dash-board-btn">Dash Board</a></center>
+          <center><a href="../dashboard/index.php" id="dash-board-btn">Dash Board</a></center>
         </div>
       </header>
       <br>

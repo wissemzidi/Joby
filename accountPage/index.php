@@ -4,60 +4,58 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../project assets/logo/logo(light).svg">
-    <link rel="stylesheet" href="style.css" />
-    <title>Account</title>
-  </head>
-  <body>
-    <main id="content">
-      <section id="page__title" style="display: flex;">
-        <a href="../index.php" class="simple-btn"><<</a>
-        <h1 style="margin-inline: auto;font-size: 2rem; font-weight: 400; color: var(--clr-purple-100); font-family: var(--ff-netron);">Account</h1>
-      </section>
-      <br />
-      <header>
-        <div id="account__img">
-          <img height="100" src="./img/logo.jpg" alt="Img" />
-          <input type="file" accept="image/*" id="changeImg"></input>
-        </div>
-        <div id="account__info">
-          <h1><?=$user->username?></h1>
-          <h5><?=$user->email?></h5>
-          <select id="interest" name="interest" style="margin-block: 1rem; 
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="../project assets/logo/logo(light).svg">
+  <link rel="stylesheet" href="style.css" />
+  <title>Account</title>
+</head>
+
+<body>
+  <main id="content">
+    <section id="page__title" style="display: flex;">
+      <a href="../index.php" class="simple-btn">
+        <h1
+          style="margin-inline: auto;font-size: 2rem; font-weight: 400; color: var(--clr-purple-100); font-family: var(--ff-netron);">
+          Account</h1>
+    </section>
+    <br />
+    <header>
+      <div id="account__img">
+        <img height="100" src="./img/logo.jpg" alt="Img" />
+        <input type="file" accept="image/*" id="changeImg"></input>
+      </div>
+      <div id="account__info">
+        <h1><?=$user->username?></h1>
+        <h5><?=$user->email?></h5>
+        <select id="interest" name="interest" style="margin-block: 1rem; 
             background-color: var(--clr-background); 
             border: 1px rgba(0, 0, 0, 0.2) solid; 
             outline: transparent; transition: 0.5s background-color ease-out">
-            <option value="">What are you ?</option>
-            <option value="graphic design">Worker</option>
-            <option value="develop">Hiring manager</option>
-          </select>
-          <center><a href="../dashboard/index.php" id="dash-board-btn">Dash Board</a></center>
-        </div>
-      </header>
-      <br>
-      <hr>
-      <br>
-      <section id="hero">
-        <div id="inputs">
-          <form action="../accountPage/" id="input" method="post">
-            <label for="changeName">Change Name</label>
-            <br>
-            <input
-              name="name"
-              id="changeName"
-              placeholder="username"
-              value="<?=$user->username?>"
-              type="text"
-            />
-            <button type="submit" name="chUser">Submit</button>
-          </form>
+          <option value="">What are you ?</option>
+          <option value="graphic design">Worker</option>
+          <option value="develop">Hiring manager</option>
+        </select>
+        <center><a href="../dashboard/index.php" id="dash-board-btn">Dash Board</a></center>
+      </div>
+    </header>
+    <br>
+    <hr>
+    <br>
+    <section id="hero">
+      <div id="inputs">
+        <form action="../accountPage/" id="input" method="post">
+          <label for="changeName">Change Name</label>
           <br>
-          <center>
-            <h6>
+          <input name="name" id="changeName" placeholder="username" value="<?=$user->username?>" type="text" />
+          <button type="submit" name="chUser">Submit</button>
+        </form>
+        <br>
+        <center>
+          <h6>
             <?php  
               if(isset($_POST['chUser'])){
                 $username = $_POST['name'];
@@ -76,62 +74,45 @@
                 echo '<p style="color:#0A0;">username changed successfully</p><br>';
               }
             ?>
-            </h6>
-          </center>
-          <form action="../accountPage/" id="input" method="post">
-            <label for="changeEmail">Change Email</label>
-            <br>
-            <input
-              name="email"
-              id="changeEmail"
-              placeholder="email@gmail.com"
-              value="<?=$user->email?>"
-              type="text"
-              disabled
-            />
-            <button type="submit" >Submit</button>
-          </form>
+          </h6>
+        </center>
+        <form action="../accountPage/" id="input" method="post">
+          <label for="changeEmail">Change Email</label>
           <br>
-          <hr>
-          <br>
-          <form action="../accountPage/" id="input" method="post">
-            <h3 style="font-weight: 400;
+          <input name="email" id="changeEmail" placeholder="email@gmail.com" value="<?=$user->email?>" type="text"
+            disabled />
+          <button type="submit">Submit</button>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <form action="../accountPage/" id="input" method="post">
+          <h3 style="font-weight: 400;
             color: var(--clr-purple-100); 
             font-family: var(--ff-netron);
             text-align: center;">Change Password</h3>
+          <br>
+          <div id="inputs">
+            <label for="currentPwd">Current password</label>
             <br>
-            <div id="inputs">
-              <label for="currentPwd">Current password</label>
-              <br>
-              <input
-                style="width: 90%;
-                margin-inline: 1vw;"
-                name="currentPwd"
-                id="currentPwd"
-                placeholder="Current Password"
-                type="password"
-              />
-              <br />
-              <br>
-              <label for="newPwd">New password</label>
-              <br />
-              <input
-                style="width: 90%;
-                margin-inline: 1vw;"
-                name="newPwd"
-                id="newPwd"
-                placeholder="New Password"
-                type="password"
-              />
-              <br />
-            </div>
+            <input style="width: 90%;
+                margin-inline: 1vw;" name="currentPwd" id="currentPwd" placeholder="Current Password"
+              type="password" />
+            <br />
             <br>
-            <center>
-              <button style="text-align: center;" type="submit" name="chPwd">Submit password</button>
-            </center>
-          </form>
+            <label for="newPwd">New password</label>
+            <br />
+            <input style="width: 90%;
+                margin-inline: 1vw;" name="newPwd" id="newPwd" placeholder="New Password" type="password" />
+            <br />
+          </div>
           <br>
           <center>
+            <button style="text-align: center;" type="submit" name="chPwd">Submit password</button>
+          </center>
+        </form>
+        <br>
+        <center>
           <?php
               if(isset($_POST['chPwd'])){
                 $old_pwd = $_POST['currentPwd'];
@@ -154,20 +135,21 @@
                 echo '<p style="color:#0A0;">password changed successfully</p><br>';
               }
             ?>
-            </center>
-        </div>
-        <center>
-          <form method="POST">
-            <button style="text-align: center;" type="submit" name="logout">Logout</button>
-          </form>
-          <?php
+        </center>
+      </div>
+      <center>
+        <form method="POST">
+          <button style="text-align: center;" type="submit" name="logout">Logout</button>
+        </form>
+        <?php
             if(isset($_POST['logout'])){
               logout();
             }
           ?>
-        </center>
-      </section>
-    </main>
-  </body>
-  <script src="./main.js"></script>
+      </center>
+    </section>
+  </main>
+</body>
+<script src="./main.js"></script>
+
 </html>

@@ -24,7 +24,9 @@ This project is an input validation with a styling.
 
 - HTML 5
 - CSS 3
-- Java Script
+- vanilla **Java Script**
+- php
+- laravel
 
 [Back To The Top](#read-me)
 

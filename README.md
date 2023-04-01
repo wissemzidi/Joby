@@ -1,6 +1,6 @@
 # Read Me
 
-## [👀 Live-Server](http://squar3.me)
+## [👀 Live-Server](http://joby.rf.gd/)
 
 <img src="./preview.png" alt="">
 
